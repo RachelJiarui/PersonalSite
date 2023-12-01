@@ -1,0 +1,60 @@
+body {
+  font-family: 'Chivo', sans-serif;
+  font-size: 14px;
+}
+
+p {
+  text-align: justify;
+  margin: 0px;
+  padding: 0px;
+  word-break: break-all;
+  hyphens: auto;
+}
+
+a {
+  word-wrap: break-word;
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: grey;
+}
+
+hr {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.section {
+  margin: 8px;
+}
+
+.container {
+  display: grid;
+  margin: 0px;
+  grid-template-columns: 1fr 1fr;
+  min-width: 100%;
+  grid-gap: 20px;
+}
+
+.header-right {
+  display: grid;
+  margin: 0px;
+  grid-template-columns: 1fr 1fr;
+  min-width: 100%;
+}
+
+.action-button {
+  justify-self: end;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  top: 16px;
+  bottom: 16px;
+  left: 50%; /* Place the line in the middle of the container */
+  border-left: 1px solid #333; /* Set the color of the vertical line */
+  transform: translateX(-50%); /* Center the line using translation */
+}
