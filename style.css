@@ -27,6 +27,7 @@ hr {
 }
 
 .section {
+  padding: 0px;
   position: relative;
   margin: 8px;
 }
@@ -65,13 +66,14 @@ hr {
 }
 
 .scrollable {
+  padding: 0px;
   overflow-y: auto;
   max-height: 95vh;
 }
 
 /* Hide the scrollbar for webkit browsers */
 .scrollable::-webkit-scrollbar {
-  width: 0.5em;
+  width: 0;
 }
 
 .header-right {
@@ -117,4 +119,21 @@ hr {
 .caption {
   margin-top: 12px;
   margin-bottom: 36px;
+}
+
+.clickable:hover {
+      cursor: pointer; /* Optional: Change cursor to a pointer */
+    }
+
+.title {
+  display: grid;
+  margin: 0px;
+  grid-template-columns: 1fr 2fr;
+  min-width: 100%;
+}
+
+.date {
+  display: flex;
+  flex-direction: column;
+  font-style: italic;
 }

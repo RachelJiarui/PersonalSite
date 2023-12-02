@@ -1,9 +1,11 @@
 function select() {
-  // changes the header
-  document.getElementById("table-view").classList.toggle("selected")
-  document.getElementById("table-view").classList.toggle("not-selected")
-  document.getElementById("gallery-view").classList.toggle("not-selected")
-  document.getElementById("gallery-view").classList.toggle("selected")
+  document.getElementById("table-view").classList.toggle("selected");
+  document.getElementById("gallery-view").classList.toggle("selected");
+  document.getElementById("table-view").classList.toggle("not-selected");
+  document.getElementById("gallery-view").classList.toggle("not-selected");
 
-  // changes the body
+  document.getElementById("table-view-body").classList.toggle("selected");
+  document.getElementById("gallery-view-body").classList.toggle("selected");
+  document.getElementById("table-view-body").classList.toggle("not-selected");
+  document.getElementById("gallery-view-body").classList.toggle("not-selected");
 }
