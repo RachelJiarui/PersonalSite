@@ -8,11 +8,16 @@ p {
   margin: 0px;
   padding: 0px;
   word-break: break-all;
-  hyphens: auto;
+}
+
+.title-role {
+  overflow: auto;
+  word-break: normal;
+  white-space: normal;
+  text-align: start;
 }
 
 a {
-  word-wrap: break-word;
   text-decoration: none;
   color: black;
 }
@@ -101,7 +106,7 @@ hr {
 }
 
 .contact-section {
-  margin-bottom: 2vh;
+  margin-bottom: 6vh;
 }
 
 .image {
@@ -113,6 +118,14 @@ hr {
 .image-container {
   width: 100%;
   height: 50vh; /* Set the desired height */
+  overflow: hidden; /* Hide the overflowing content */
+}
+
+.image-bar-container {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  width: 100%;
+  height: 12vh; /* Set the desired height */
   overflow: hidden; /* Hide the overflowing content */
 }
 
@@ -136,4 +149,12 @@ hr {
   display: flex;
   flex-direction: column;
   font-style: italic;
+}
+
+.desc {
+  margin-bottom: 12px;
+}
+
+.heading {
+  margin-bottom: 36px;
 }
