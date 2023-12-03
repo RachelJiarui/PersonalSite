@@ -138,6 +138,7 @@ hr {
 
 .clickable:hover {
       cursor: pointer; /* Optional: Change cursor to a pointer */
+      color: gray;
     }
 
 .title {
@@ -158,5 +159,6 @@ hr {
 }
 
 .heading {
+  margin-top: 40px;
   margin-bottom: 36px;
 }
