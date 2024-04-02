@@ -82,14 +82,27 @@ hr {
 }
 
 .header-right {
-  display: grid;
+  text-align: right;
   margin: 0px;
-  grid-template-columns: 1fr 1fr;
   min-width: 100%;
+}
+
+.header-left {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.header-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .action-button {
   justify-self: end;
+}
+
+.selected-nav {
+  font-style: italic;
 }
 
 .selected {
