@@ -17,8 +17,8 @@ function selectResume() {
   document.getElementById("table-view-body").classList.add("selected");
   document.getElementById("table-view-body").classList.remove("not-selected");
 
-  document.getElementById("table-view").classList.add("selected-nav")
-  document.getElementById("gallery-view").classList.remove("selected-nav")
+  document.getElementById("technical-view-body").classList.add("not-selected");
+  document.getElementById("technical-view-body").classList.remove("selected");
 }
 
 function selectMedia() {
@@ -28,6 +28,26 @@ function selectMedia() {
   document.getElementById("table-view-body").classList.add("not-selected");
   document.getElementById("table-view-body").classList.remove("selected");
 
-  document.getElementById("table-view").classList.remove("selected-nav")
-  document.getElementById("gallery-view").classList.add("selected-nav")
+  document.getElementById("technical-view-body").classList.add("not-selected");
+  document.getElementById("technical-view-body").classList.remove("selected");
 }
+
+function selectTechnical() {
+  document
+    .getElementById("technical-view-body")
+    .classList.remove("not-selected");
+  document.getElementById("technical-view-body").classList.add("selected");
+
+  document.getElementById("table-view-body").classList.add("not-selected");
+  document.getElementById("table-view-body").classList.remove("selected");
+
+  document.getElementById("gallery-view-body").classList.add("not-selected");
+  document.getElementById("gallery-view-body").classList.remove("selected");
+}
+
+document.querySelectorAll(".menu-item").forEach((item) => {
+  item.addEventListener("click", () => {
+    document.querySelector(".menu-item.selected")?.classList.remove("selected");
+    item.classList.add("selected");
+  });
+});
