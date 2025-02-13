@@ -1,474 +1,883 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Rachel Chen's Domain</title>
-    <link rel="icon" href="images/favicon.png">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chivo&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div class="big-container">
-      <!-- First column -->
-      <div class="section sticky">
-        <!-- First column headers (2 titles) -->
-        <div class="header">
-          <div class="container">
-            <div>
-              Current Status
-            </div>
-            <div>
-              About Me
-            </div>
-          </div>
-        </div>
-        <hr>
-
-        <!-- First column bodies (2 bodies) -->
-        <div class="container">
-          <!-- Body 1 -->
-          <p>
-            I'm a third-year student studying a <a href="https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/computer-science-philosophy-bs/">Bachelor's of Science degree in
-            Computer Science and Philosophy</a> with a <a href="https://catalog.northeastern.edu/undergraduate/science/mathematics/mathematics-minor/#minorrequirementstext">Minor in Mathematics</a> at <a href="https://www.khoury.northeastern.edu">Northeastern University Khoury College of Computer Sciences</a>.
-            My journey so far has been about honing my technical skills in computer science to create meaningful social impact through thoughtful engineering.
-            My academic history has been a messy conglomeration of <a href="https://maa.org/math-competitions">competitive mathematics</a>, deep dives into <a href="https://cyber.harvard.edu/works/lessig/laws_cyberspace.pdf">tech, law</a> & <a href="https://mitpress.mit.edu/9780262019842/speculative-everything/">media</a> and tinkering around a range of passion projects.
-            These experiences have shaped my core passion: building technology that guides and empowers people to intuitively make better decisions and live good lives.
-            I conduct research in fostering virtues online, nudging techniques, and human-centric design at the <a href="https://www.pluralconnections.org/">Plural Connections Group</a>.
-            Outside of my life in tech, I've enjoy teaching underclassmen Algorithms & Data Structures as the Director of Tech Consulting at TAMID, taking too long to finish the Dune series, and spending time in the great outdoors via hiking and snowboarding.
-          </p>
-          <!-- Body 2 -->
-          <p>
-            My early education was founded on the principle that math was everything. Ever since I was young, I participated (poorly) in competitive math teams, went to <a href="https://www.ideamath.education/landing/home">Idea Math Camp</a>, and then much later, a six-week intensive summer studies at <a href="https://hcssim.org">Hampshire College Summer Studies in Mathematics</a>, where I really began to appreciate the quirks and scope of the field. I took my interests into computer science, where I enjoyed the marriage of theoretical thinking and practical application. In 2020, I was accepted into the <a href="https://math.mit.edu/research/highschool/primes/program/index.html">MIT PRIMES</a>'s Computer Science Research track where I worked with <a href="http://drean.io">Jules Drean</a>, a graduate student at <a href="https://www.csail.mit.edu">MIT CSAIL</a>, on a project called <a href="#mitprimes">Non-Fungible Objects (NFO): Hard-to-Counterfeit Virtual Assets Based On Trusted-Hardware</a>.
-            I joined Northeastern in 2022 where I expanded my knowledge about computer science into the world of full stack web development and AI at the TAMID Group on campus and at Samsung AI.
-            I soon became obsessed with computer science as it became the medium for both my quantitative and creative expression. During the same year, I read <a href="https://www.goodreads.com/en/book/show/20527133">Superintelligence: Risks, Dangers, Strategies</a> by Nick Bostrom and became enraptured by tech, ethics, and society. My activities during 2023 reflected all my interests: I strengthened my technical literacy at a Software Engineering Internship at <a href="https://ampion.net/">Ampion, PBC</a> and worked with <a href=""https://www.khoury.northeastern.edu/people/daniel-patterson/"">Professor Patterson</a> at the Northeastern University to work on his code synthesizer research project combating automation bias, and bringing AI into programming languages.
-            In 2024, I started working at the <a href="https://www.pluralconnections.org/">Plural Connections Group</a> as a Research Engineer Co-op on their Intellectual Humility initiative and led TAMID as their Executive Vice President.
-            All in all, my work isn’t just about writing code—it’s about exploring how technology shapes the way we think, interact, and solve problems. And that’s what keeps me excited for what’s next.
-          </p>
-        </div>
-      </div>
-
-      <!-- Second column -->
-      <div class="section scrollable">
-        <!-- First column headers (3 titles) -->
-        <div class="container header-container">
-          <div class="header-left">
-            <div id="table-view">
-                Explore Me
-            </div>
-          </div>
-        </div>
-        <hr>
-
-        <!-- Contact section -->
-        <div class="container contact-section">
-          <div>
-            Rachel Chen
-          </div>
-          <div class="contact-info">
-            <div>Mail: rachel.j.chen@gmail.com</div>
-            <a href="https://github.com/RachelJiarui">GitHub: github.com/RachelJiarui</a>
-            <a href="https://www.linkedin.com/in/racheljiarui/">LinkedIn: linkedIn.com/racheljiarui</a>
-            <div>Phone Number: (617)-438-9641</div>
-            <div class="menu">
-                <div onClick="selectTechnical()" class="clickable menu-item" id="media">My Technical Portfolio</div>
-                <div onClick="selectResume()" class="clickable menu-item" id="resume">My Curriculum Vitae</div>
-                <div onClick="selectMedia()" class="clickable menu-item selected" id="media">My Favorite Media</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Body of the second column -->
-        <div class="body">
-          <!-- Gallery work -->
-          <div id="gallery-view-body" class="selected">
-            <div class="container gallery-view-body">
-              <!-- Row one -->
-              <div class="image-container"><img class="image" src="images/filler2.jpeg"/></div>
-              <div class="image-container"><img class="image" src="images/filler3.jpeg"/></div>
-              <!-- Row two -->
-              <div class="caption">
-                <p>Title: The Laws of Cyberspace</p>
-                <p>Author: Lawrence Lessig</p>
-                <p>Caption: I've met him before!</p>
-              </div>
-              <div class="caption">
-                <p>Title: Dune Series</p>
-                <p>Author: Frank Herbert</p>
-                <p>Caption: All time favorite book series</p>
-              </div>
-              <!-- Row three -->
-              <div class="image-container"><img class="image" src="images/filler4.jpeg"/></div>
-              <div class="image-container"><img class="image" src="images/filler5.jpeg"/></div>
-              <!-- Row four -->
-              <div class="caption">
-                <p>Title: Ender's Game</p>
-                <p>Author: Olson Scott Card</p>
-                <p>Caption: All time favorite book</p>
-              </div>
-              <div class="caption">
-                <p>Title: The Reluctant Prophet of Effective Altruism</p>
-                <p>Author: Gideon Lewis-Kraus</p>
-                <p>Caption: Is Effective Altruism Good?</p>
-              </div>
-              <!-- Row five -->
-              <div class="image-container"><img class="image" src="images/filler6.jpeg"/></div>
-              <div class="image-container"><img class="image" src="images/filler7.jpeg"/></div>
-              <!-- Row six -->
-              <div class="caption">
-                <p>Title: The Beautiful Things That Heaven Bears</p>
-                <p>Author: Dinaw Mengestu</p>
-                <p>Caption: Simply gorgeous writing</p>
-              </div>
-              <div class="caption">
-                <p>Title: Blame!</p>
-                <p>Author: Tsutomu Nihei</p>
-                <p>Caption: Illustrator of many of these arbitrary images...</p>
-              </div>
-              <!-- Row seven -->
-              <div class="image-container"><img class="image" src="images/filler8.jpeg"/></div>
-              <div class="image-container"><img class="image" src="images/filler9.jpeg"/></div>
-              <!-- Row eight -->
-              <div class="caption">
-                <p>Title: Hymn to Intellectual Beauty</p>
-                <p>Author: Percy Bysshe Shelley
-                </p>
-                <p>Caption: The human spirit!</p>
-              </div>
-              <div class="caption">
-                <p>Title: Oyasumi Punpun</p>
-                <p>Author: Inio Asano</p>
-                <p>Caption: Tragedy 100</p>
-              </div>
-              <!-- Row nine -->
-              <div class="image-container"><img class="image" src="images/filler10.jpeg"/></div>
-              <div class="image-container"><img class="image" src="images/filter11.jpeg"/></div>
-              <!-- Row ten -->
-              <div class="caption">
-                <p>Title: Kolmogorov Complexity and Our Search for Meaning</p>
-                <p>Author: Noson S. Yanofsky</p>
-                <p>Caption: Math and the meaning of life</p>
-              </div>
-              <div class="caption">
-                <p>Title: The Island of Seawomen</p>
-                <p>Author: Lisa See</p>
-                <p>Caption: Jeju Island & Japanese Colonization</p>
-              </div>
-              <!-- Row eleven -->
-              <div class="image-container"><img class="image" src="images/filler12.jpeg"/></div>
-              <div class="image-container"><img class="image" src="images/filler13.jpeg"/></div>
-              <!-- Row twelve -->
-              <div class="caption">
-                <p>Title: Stand Out of Our Light</p>
-                <p>Author: James William</p>
-                <p>Caption: Attention is Everything</p>
-              </div>
-              <div class="caption">
-                <p>Title: Speculative Everything</p>
-                <p>Author: Anthony Dunne and Fiona Raby</p>
-                <p>Caption: Purpose of Design, Fiction, and Social Dreaming</p>
-              </div>
-              <!-- Row thirteen -->
-              <div class="image-container"><img class="image" src="images/filler14.jpeg"/></div>
-              <div class="image-container"><img class="image" src="images/filler15.jpeg"/></div>
-              <!-- Row fourteen -->
-              <div class="caption">
-                <p>Title: Sapiens</p>
-                <p>Author: Yuval Noah Harari</p>
-                <p>Caption: A Brief History of Humankind</p>
-              </div>
-              <div class="caption">
-                <p>Title: So Human an Animal</p>
-                <p>Author: René Dubos</p>
-                <p>Caption: Science of humanity</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- MY CV -->
-          <div id="table-view-body" class="not-selected">
-            <p class="heading">Professional Experience</p>
-            <div class="container">
-              <!-- Item 1 -->
-              <div class="title">
-                <div class="date">
-                  <div>08/19/24</div>
-                  <div>12/31/24</div>
-                </div>
-                <p class="title-role">Research Engineer @ Plural Connections Group</p>
-              </div>
-              <p class="desc">Working at Northeastern University under Professor Nabeel Gillani at lab aimed to increase pluralism through education and restructuring social media. Tasked as the principle engineer to create interventions to increase intellectual humility online. Using React, Flask, MongoDB to build web app that mimics the Reddit-platform. Deployed on AWS EC2 Instance using Gunicorn and Nginx. User tested and pending launch to hundreds of research participants.</p>
-              <!-- Item 1 -->
-              <div class="title">
-                <div class="date">
-                  <div>05/20/24</div>
-                  <div>08/16/24</div>
-                </div>
-                <p class="title-role">Software Engineering Intern @ UKG</p>
-              </div>
-              <p class="desc">Worked at Lowell HQ as a Software Engineering Intern on Cloud Observability and Realiability Tooling team. Built autonomations to resolve daily memory alerts and contructed new Grafana Cloud dashboards to help migration from on-prem services to cloud. Leveraged cloud observability tools like Kubernetes, Google Cloud Platform, ELK stack, Grafana, InfluxDB, Splunk, Datadog, and Cronjobs in tickets.</p>
-              <!-- Item 2 -->
-              <div class="title">
-                <div class="date">
-                  <div>05/15/23</div>
-                  <div>8/25/23</div>
-                </div>
-                <p class="title-role">Software Engineering Intern @ Ampion</p>
-              </div>
-              <p class="desc">Worked on the Subscriber Experience team to conduct full rehaul and modernization of main website. Optimized SEOs and connected website code to Content Management System (DatoCMS). Performed data analysis on customer issues on Salesforce and website analytics from Google Analytics, presenting findings to team and executive management. </p>
-              <!-- Item 5 -->
-              <div class="title">
-                <div class="date">
-                  <div>05/15/23</div>
-                  <div>07/01/23</div>
-                </div>
-                <p class="title-role">Multivariable Calculus Teacher Assistant</p>
-              </div>
-              <p class="desc">Graded weekly quizzes for over 60 students and provided solution manual feedback for Professor Seo.</p>
-            </div>
-            <p class="heading">Leadership Roles</p>
-            <div class="container">
-                <!-- Item 1 -->
-                <div class="title">
-                  <div class="date">
-                    <div>01/01/25</div>
-                    <div>05/01/25</div>
-                  </div>
-                  <p class="title-role">Director of Tech Consulting of TAMID</p>
-                </div>
-                <p class="desc">Scoped project for 6 developers and teach weekly lessons in algorithms and technical interview preparation to peers.</p>
-                <!-- Item 1 -->
-                <div class="title">
-                  <div class="date">
-                    <div>05/01/24</div>
-                    <div>12/31/24</div>
-                  </div>
-                  <p class="title-role">Executive Vice President of TAMID</p>
-                </div>
-                <p class="desc">Oversaw operations for 150+ member club, led 13 executive leaders and 7 committees to drive strategic initiatives in recruitment, finances, social and professional engagement.</p>
-              <!-- Item 1 -->
-              <div class="title">
-                <div class="date">
-                  <div>12/01/23</div>
-                  <div>05/01/24</div>
-                </div>
-                <p class="title-role">VP of Operations & Finance of TAMID</p>
-              </div>
-              <p class="desc">Standardizing processes for the back-end logistics of TAMID Consulting Club and building out a Recruitment dashboard on Notion using automations.</p>
-              <!-- Item 1 -->
-              <div class="title">
-                <div class="date">
-                  <div>07/01/23</div>
-                  <div>12/01/23</div>
-                </div>
-                <p class="title-role">Tech Consulting Foundations Instructor of TAMID</p>
-              </div>
-              <p class="desc">Educated a weekly class of 13 students on web development fundamentals: Git/Version Control, HTML, CSS, JavaScript, React, and APIs. Included 3-part homework of varying difficulties.</p>
-              <!-- Add here -->
-            </div>
-            <p class="heading">Research</p>
-            <div class="container">
-                <!-- Item 1 -->
-                  <div class="title">
-                  <div class="date">
-                      <div>01/01/25</div>
-                      <div>05/01/25</div>
-                  </div>
-                  <p class="title-role">Research Assistant at Plural Connections Group</p>
-                  </div>
-                  <p class="desc">Same desc. as Research Engineer position at Plural Connections Group under Professional Experience.</p>
-              <!-- Item 1 -->
-                <div class="title">
-                <div class="date">
-                    <div>05/01/23</div>
-                    <div>12/31/24</div>
-                </div>
-                <p class="title-role">Research Assistant to Professor Daniel Patterson</p>
-                </div>
-                <p class="desc">Proposing an environment to prevent automation bias for integrated human-AI optimized Python programming leveraging ChatGPT API. Built prototype and deployed it to be used by 50 students in a lab. Submitted paper to The Art, Science, and Engineering of Programming journal.</p>
-                <div class="title">
-                <div class="date">
-                    <div>01/01/24</div>
-                    <div>05/11/24</div>
-                </div>
-                    <p class="title-role">Human Autonomy in Digital Social Networks and Recommender Systems</p>
-                </div>
-                <p class="desc">Independent research project advised by Professor Patterson exploring autonomy, a new framework for defining of autonomy, and applying it to social media platforms that use recommender systems. Created and presented poster at RISE Undergraduate Conference Presentation on April 11th, 2024.</p>
-                <div class="title">
-                    <div class="date">
-                        <div>01/01/21</div>
-                        <div>07/27/22</div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Rachel Chen's Domain</title>
+        <link rel="icon" href="images/favicon.png" />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Chivo&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <div class="big-container">
+            <!-- First column -->
+            <div class="section sticky">
+                <!-- First column headers (2 titles) -->
+                <div class="header">
+                    <div class="container">
+                        <div>Current Status</div>
+                        <div>About Me</div>
                     </div>
-                    <p class="title-role">Computer Science Researcher at MIT CSAIL</p>
                 </div>
-                <p class="desc">Invented research paper on secure hardware to ensure digital ownership on virtual objects using crytopgrahy. Specified 3 security mechanisms to unwanted side-channels and logic using cryptographic protocols analysis.</p>
-            </div>
-            <p class="heading">Written Work</p>
-            <div class="container">
-                <!-- Item 1 -->
-                <div class="title">
-                  <div class="date">
-                    <div>11/17/23</div>
-                    <div>12/08/23</div>
-                  </div>
-                  <p class="title-role">Erosion of Autonomy in Algorithmic Recommendation Systems</p>
-                </div>
-                <p class="desc">A dissection of the erosion of autonomy in algorithmic recommendation systems, how they are incompatible, and state an urgency of legal action.</p>
-                <!-- Item 1 -->
-                <div class="title">
-                <div class="date">
-                    <div>10/23/23</div>
-                    <div>11/08/23</div>
-                </div>
-                <p class="title-role">Free Speech is a Triangle Literature Review</p>
-                </div>
-                <p class="desc">A summary of the Jack Balkin piece "Free Speech is a Triangle," where I propose a technological solution of using decentralized social platforms to safeguard users' freedom of speech against what he deemed "new-speech regulation" harms.</p></div>
-          </div>
+                <hr />
 
-          <!-- MY TECHNICAL PORTFOLIO-->
-          <div id="technical-view-body" class="not-selected">
-            <p class="heading">Deeper Look into Technical Projects</p>
-            <div class="container">
-            <!-- Item 1 -->
-            <div class="title">
-                <div class="date">
-                <div>09/01/2024</div>
-                <div>012/19/2024</div>
+                <!-- First column bodies (2 bodies) -->
+                <div class="container">
+                    <!-- Body 1 -->
+                    <p>
+                        I'm a third-year student studying a
+                        <a
+                            href="https://catalog.northeastern.edu/undergraduate/computer-information-science/computer-information-science-combined-majors/computer-science-philosophy-bs/"
+                            >Bachelor's of Science degree in Computer Science
+                            and Philosophy</a
+                        >
+                        with a
+                        <a
+                            href="https://catalog.northeastern.edu/undergraduate/science/mathematics/mathematics-minor/#minorrequirementstext"
+                            >Minor in Mathematics</a
+                        >
+                        at
+                        <a href="https://www.khoury.northeastern.edu"
+                            >Northeastern University Khoury College of Computer
+                            Sciences</a
+                        >. My journey so far has been about honing my technical
+                        skills in computer science to create meaningful social
+                        impact through thoughtful engineering. My academic
+                        history has been a messy conglomeration of
+                        <a href="https://maa.org/math-competitions"
+                            >competitive mathematics</a
+                        >, deep dives into
+                        <a
+                            href="https://cyber.harvard.edu/works/lessig/laws_cyberspace.pdf"
+                            >tech, law</a
+                        >
+                        &
+                        <a
+                            href="https://mitpress.mit.edu/9780262019842/speculative-everything/"
+                            >media</a
+                        >
+                        and tinkering around a range of passion projects. These
+                        experiences have shaped my core passion: building
+                        technology that guides and empowers people to
+                        intuitively make better decisions and live good lives. I
+                        conduct research in fostering virtues online, nudging
+                        techniques, and human-centric design at the
+                        <a href="https://www.pluralconnections.org/"
+                            >Plural Connections Group</a
+                        >. Outside of my life in tech, I've enjoy teaching
+                        underclassmen Algorithms & Data Structures as the
+                        Director of Tech Consulting at TAMID, taking too long to
+                        finish the Dune series, and spending time in the great
+                        outdoors via hiking and snowboarding.
+                    </p>
+                    <!-- Body 2 -->
+                    <p>
+                        My early education was founded on the principle that
+                        math was everything. Ever since I was young, I
+                        participated (poorly) in competitive math teams, went to
+                        <a href="https://www.ideamath.education/landing/home"
+                            >Idea Math Camp</a
+                        >, and then much later, a six-week intensive summer
+                        studies at
+                        <a href="https://hcssim.org"
+                            >Hampshire College Summer Studies in Mathematics</a
+                        >, where I really began to appreciate the quirks and
+                        scope of the field. I took my interests into computer
+                        science, where I enjoyed the marriage of theoretical
+                        thinking and practical application. In 2020, I was
+                        accepted into the
+                        <a
+                            href="https://math.mit.edu/research/highschool/primes/program/index.html"
+                            >MIT PRIMES</a
+                        >'s Computer Science Research track where I worked with
+                        <a href="http://drean.io">Jules Drean</a>, a graduate
+                        student at
+                        <a href="https://www.csail.mit.edu">MIT CSAIL</a>, on a
+                        project called
+                        <a href="#mitprimes"
+                            >Non-Fungible Objects (NFO): Hard-to-Counterfeit
+                            Virtual Assets Based On Trusted-Hardware</a
+                        >. I joined Northeastern in 2022 where I expanded my
+                        knowledge about computer science into the world of full
+                        stack web development and AI at the TAMID Group on
+                        campus and at Samsung AI. I soon became obsessed with
+                        computer science as it became the medium for both my
+                        quantitative and creative expression. During the same
+                        year, I read
+                        <a
+                            href="https://www.goodreads.com/en/book/show/20527133"
+                            >Superintelligence: Risks, Dangers, Strategies</a
+                        >
+                        by Nick Bostrom and became enraptured by tech, ethics,
+                        and society. My activities during 2023 reflected all my
+                        interests: I strengthened my technical literacy at a
+                        Software Engineering Internship at
+                        <a href="https://ampion.net/">Ampion, PBC</a> and worked
+                        with
+                        <a
+                            href="https://www.khoury.northeastern.edu/people/daniel-patterson/"
+                            >Professor Patterson</a
+                        >
+                        at the Northeastern University to work on his code
+                        synthesizer research project combating automation bias,
+                        and bringing AI into programming languages. In 2024, I
+                        started working at the
+                        <a href="https://www.pluralconnections.org/"
+                            >Plural Connections Group</a
+                        >
+                        as a Research Engineer Co-op on their Intellectual
+                        Humility initiative and led TAMID as their Executive
+                        Vice President. All in all, my work isn’t just about
+                        writing code—it’s about exploring how technology shapes
+                        the way we think, interact, and solve problems. And
+                        that’s what keeps me excited for what’s next.
+                    </p>
                 </div>
-                <p class="title-role">Social Cues Intervention on Reddit-Like Platform @ Plural Connections Group</p>
             </div>
-            <p class="desc">Deployed and developed full-stack app on AWS mimicking Reddit to test hypothesis on use of social cues to increase intellectual humility in online discussions on U.S. politics. Used React, Flask, AWS EC2, and MongoDB for web development, and worked closely with Dartmouth NLP Group to develop and fine-tune an intellectual humility classifier on political speech. Worked on k-shot learning and prompt engineering ChatGPT to improve classification and the intervention.</p>
-            <!-- Item 1 -->
-            <div class="title">
-                <div class="date">
-                <div>05/01/2024</div>
-                <div>08/30/2024</div>
+
+            <!-- Second column -->
+            <div class="section scrollable">
+                <!-- First column headers (3 titles) -->
+                <div class="container header-container">
+                    <div class="header-left">
+                        <div id="table-view">Explore Me</div>
+                    </div>
                 </div>
-                <p class="title-role">Truth Agent @ Google Gemini Developer Competition</p>
-            </div>
-            <div>
-                <p class="desc">Pioneering browser extention AI system to foster critical thinking skills by measuring real-time online misinformation on the page. Submitted to Google Gemini Developer Competition, pending results.</p>
-                <p class="desc">
-                    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-                    <a href="https://github.com/RachelJiarui/TruthAgent" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-github"></i> GitHub link to Truth Agent
-                    </a>
-                </p>
-            </div>
-            <!-- Item 1 -->
-            <div class="title">
-                <div class="date">
-                <div>03/29/2024</div>
-                <div>03/30/2024</div>
+                <hr />
+
+                <!-- Contact section -->
+                <div class="container contact-section">
+                    <div>Rachel Chen</div>
+                    <div class="contact-info">
+                        <div>Mail: rachel.j.chen@gmail.com</div>
+                        <a href="https://github.com/RachelJiarui"
+                            >GitHub: github.com/RachelJiarui</a
+                        >
+                        <a href="https://www.linkedin.com/in/racheljiarui/"
+                            >LinkedIn: linkedIn.com/racheljiarui</a
+                        >
+                        <div>Phone Number: (617)-438-9641</div>
+                        <div class="menu">
+                            <div
+                                onClick="selectTechnical()"
+                                class="clickable menu-item"
+                                id="media"
+                            >
+                                My Technical Portfolio
+                            </div>
+                            <div
+                                onClick="selectResume()"
+                                class="clickable menu-item"
+                                id="resume"
+                            >
+                                My Curriculum Vitae
+                            </div>
+                            <div
+                                onClick="selectMedia()"
+                                class="clickable menu-item selected"
+                                id="media"
+                            >
+                                My Favorite Media
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <p class="title-role">EduFlex @ NU AI Hackathon</p>
-            </div>
-            <div>
-                <p class="desc">1st Place Winner. Empowering public free online computer science education to lower the barrier of entry for low-income students who don’t have access to prestigious university resources using NLP.</p>
-                <p class="desc">
-                    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-                    <a href="https://github.com/RachelJiarui/EduFlex" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-github"></i> GitHub link to EduFlex
-                    </a>
-                </p>
-            </div>
-            <!-- Item 1 -->
-            <div class="title">
-                <div class="date">
-                <div>03/01/2024</div>
-                <div>04/10/2024</div>
+
+                <!-- Body of the second column -->
+                <div class="body">
+                    <!-- Gallery work -->
+                    <div id="gallery-view-body" class="selected">
+                        <div class="container gallery-view-body">
+                            <!-- Row one -->
+                            <div class="image-container">
+                                <img class="image" src="images/filler2.jpeg" />
+                            </div>
+                            <div class="image-container">
+                                <img class="image" src="images/filler3.jpeg" />
+                            </div>
+                            <!-- Row two -->
+                            <div class="caption">
+                                <p>Title: The Laws of Cyberspace</p>
+                                <p>Author: Lawrence Lessig</p>
+                                <p>Caption: I've met him before!</p>
+                            </div>
+                            <div class="caption">
+                                <p>Title: Dune Series</p>
+                                <p>Author: Frank Herbert</p>
+                                <p>Caption: All time favorite book series</p>
+                            </div>
+                            <!-- Row three -->
+                            <div class="image-container">
+                                <img class="image" src="images/filler4.jpeg" />
+                            </div>
+                            <div class="image-container">
+                                <img class="image" src="images/filler5.jpeg" />
+                            </div>
+                            <!-- Row four -->
+                            <div class="caption">
+                                <p>Title: Ender's Game</p>
+                                <p>Author: Olson Scott Card</p>
+                                <p>Caption: All time favorite book</p>
+                            </div>
+                            <div class="caption">
+                                <p>
+                                    Title: The Reluctant Prophet of Effective
+                                    Altruism
+                                </p>
+                                <p>Author: Gideon Lewis-Kraus</p>
+                                <p>Caption: Is Effective Altruism Good?</p>
+                            </div>
+                            <!-- Row five -->
+                            <div class="image-container">
+                                <img class="image" src="images/filler6.jpeg" />
+                            </div>
+                            <div class="image-container">
+                                <img class="image" src="images/filler7.jpeg" />
+                            </div>
+                            <!-- Row six -->
+                            <div class="caption">
+                                <p>
+                                    Title: The Beautiful Things That Heaven
+                                    Bears
+                                </p>
+                                <p>Author: Dinaw Mengestu</p>
+                                <p>Caption: Simply gorgeous writing</p>
+                            </div>
+                            <div class="caption">
+                                <p>Title: Blame!</p>
+                                <p>Author: Tsutomu Nihei</p>
+                                <p>
+                                    Caption: Illustrator of many of these
+                                    arbitrary images...
+                                </p>
+                            </div>
+                            <!-- Row seven -->
+                            <div class="image-container">
+                                <img class="image" src="images/filler8.jpeg" />
+                            </div>
+                            <div class="image-container">
+                                <img class="image" src="images/filler9.jpeg" />
+                            </div>
+                            <!-- Row eight -->
+                            <div class="caption">
+                                <p>Title: Hymn to Intellectual Beauty</p>
+                                <p>Author: Percy Bysshe Shelley</p>
+                                <p>Caption: The human spirit!</p>
+                            </div>
+                            <div class="caption">
+                                <p>Title: Oyasumi Punpun</p>
+                                <p>Author: Inio Asano</p>
+                                <p>Caption: Tragedy 100</p>
+                            </div>
+                            <!-- Row nine -->
+                            <div class="image-container">
+                                <img class="image" src="images/filler10.jpeg" />
+                            </div>
+                            <div class="image-container">
+                                <img class="image" src="images/filter11.jpeg" />
+                            </div>
+                            <!-- Row ten -->
+                            <div class="caption">
+                                <p>
+                                    Title: Kolmogorov Complexity and Our Search
+                                    for Meaning
+                                </p>
+                                <p>Author: Noson S. Yanofsky</p>
+                                <p>Caption: Math and the meaning of life</p>
+                            </div>
+                            <div class="caption">
+                                <p>Title: The Island of Seawomen</p>
+                                <p>Author: Lisa See</p>
+                                <p>
+                                    Caption: Jeju Island & Japanese Colonization
+                                </p>
+                            </div>
+                            <!-- Row eleven -->
+                            <div class="image-container">
+                                <img class="image" src="images/filler12.jpeg" />
+                            </div>
+                            <div class="image-container">
+                                <img class="image" src="images/filler13.jpeg" />
+                            </div>
+                            <!-- Row twelve -->
+                            <div class="caption">
+                                <p>Title: Stand Out of Our Light</p>
+                                <p>Author: James William</p>
+                                <p>Caption: Attention is Everything</p>
+                            </div>
+                            <div class="caption">
+                                <p>Title: Speculative Everything</p>
+                                <p>Author: Anthony Dunne and Fiona Raby</p>
+                                <p>
+                                    Caption: Purpose of Design, Fiction, and
+                                    Social Dreaming
+                                </p>
+                            </div>
+                            <!-- Row thirteen -->
+                            <div class="image-container">
+                                <img class="image" src="images/filler14.jpeg" />
+                            </div>
+                            <div class="image-container">
+                                <img class="image" src="images/filler15.jpeg" />
+                            </div>
+                            <!-- Row fourteen -->
+                            <div class="caption">
+                                <p>Title: Sapiens</p>
+                                <p>Author: Yuval Noah Harari</p>
+                                <p>Caption: A Brief History of Humankind</p>
+                            </div>
+                            <div class="caption">
+                                <p>Title: So Human an Animal</p>
+                                <p>Author: René Dubos</p>
+                                <p>Caption: Science of humanity</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MY CV -->
+                    <div id="table-view-body" class="not-selected">
+                        <p class="heading">Professional Experience</p>
+                        <div class="container">
+                            <!-- Item 1 -->
+                            <div class="title">
+                                <div class="date">
+                                    <div>08/19/24</div>
+                                    <div>12/31/24</div>
+                                </div>
+                                <p class="title-role">
+                                    Research Engineer @ Plural Connections Group
+                                </p>
+                            </div>
+                            <p class="desc">
+                                Working at Northeastern University under
+                                Professor Nabeel Gillani at lab aimed to
+                                increase pluralism through education and
+                                restructuring social media. Tasked as the
+                                principle engineer to create interventions to
+                                increase intellectual humility online. Using
+                                React, Flask, MongoDB to build web app that
+                                mimics the Reddit-platform. Deployed on AWS EC2
+                                Instance using Gunicorn and Nginx. User tested
+                                and pending launch to hundreds of research
+                                participants.
+                            </p>
+                            <!-- Item 1 -->
+                            <div class="title">
+                                <div class="date">
+                                    <div>05/20/24</div>
+                                    <div>08/16/24</div>
+                                </div>
+                                <p class="title-role">
+                                    Software Engineering Intern @ UKG
+                                </p>
+                            </div>
+                            <p class="desc">
+                                Worked at Lowell HQ as a Software Engineering
+                                Intern on Cloud Observability and Realiability
+                                Tooling team. Built autonomations to resolve
+                                daily memory alerts and contructed new Grafana
+                                Cloud dashboards to help migration from on-prem
+                                services to cloud. Leveraged cloud observability
+                                tools like Kubernetes, Google Cloud Platform,
+                                ELK stack, Grafana, InfluxDB, Splunk, Datadog,
+                                and Cronjobs in tickets.
+                            </p>
+                            <!-- Item 2 -->
+                            <div class="title">
+                                <div class="date">
+                                    <div>05/15/23</div>
+                                    <div>8/25/23</div>
+                                </div>
+                                <p class="title-role">
+                                    Software Engineering Intern @ Ampion
+                                </p>
+                            </div>
+                            <p class="desc">
+                                Worked on the Subscriber Experience team to
+                                conduct full rehaul and modernization of main
+                                website. Optimized SEOs and connected website
+                                code to Content Management System (DatoCMS).
+                                Performed data analysis on customer issues on
+                                Salesforce and website analytics from Google
+                                Analytics, presenting findings to team and
+                                executive management.
+                            </p>
+                            <!-- Item 5 -->
+                            <div class="title">
+                                <div class="date">
+                                    <div>05/15/23</div>
+                                    <div>07/01/23</div>
+                                </div>
+                                <p class="title-role">
+                                    Multivariable Calculus Teacher Assistant
+                                </p>
+                            </div>
+                            <p class="desc">
+                                Graded weekly quizzes for over 60 students and
+                                provided solution manual feedback for Professor
+                                Seo.
+                            </p>
+                        </div>
+                        <p class="heading">Leadership Roles</p>
+                        <div class="container">
+                            <!-- Item 1 -->
+                            <div class="title">
+                                <div class="date">
+                                    <div>01/01/25</div>
+                                    <div>05/01/25</div>
+                                </div>
+                                <p class="title-role">
+                                    Director of Tech Consulting of TAMID
+                                </p>
+                            </div>
+                            <p class="desc">
+                                Scoped project for 6 developers and teach weekly
+                                lessons in algorithms and technical interview
+                                preparation to peers.
+                            </p>
+                            <!-- Item 1 -->
+                            <div class="title">
+                                <div class="date">
+                                    <div>05/01/24</div>
+                                    <div>12/31/24</div>
+                                </div>
+                                <p class="title-role">
+                                    Executive Vice President of TAMID
+                                </p>
+                            </div>
+                            <p class="desc">
+                                Oversaw operations for 150+ member club, led 13
+                                executive leaders and 7 committees to drive
+                                strategic initiatives in recruitment, finances,
+                                social and professional engagement.
+                            </p>
+                            <!-- Item 1 -->
+                            <div class="title">
+                                <div class="date">
+                                    <div>12/01/23</div>
+                                    <div>05/01/24</div>
+                                </div>
+                                <p class="title-role">
+                                    VP of Operations & Finance of TAMID
+                                </p>
+                            </div>
+                            <p class="desc">
+                                Standardizing processes for the back-end
+                                logistics of TAMID Consulting Club and building
+                                out a Recruitment dashboard on Notion using
+                                automations.
+                            </p>
+                            <!-- Item 1 -->
+                            <div class="title">
+                                <div class="date">
+                                    <div>07/01/23</div>
+                                    <div>12/01/23</div>
+                                </div>
+                                <p class="title-role">
+                                    Tech Consulting Foundations Instructor of
+                                    TAMID
+                                </p>
+                            </div>
+                            <p class="desc">
+                                Educated a weekly class of 13 students on web
+                                development fundamentals: Git/Version Control,
+                                HTML, CSS, JavaScript, React, and APIs. Included
+                                3-part homework of varying difficulties.
+                            </p>
+                            <!-- Add here -->
+                        </div>
+                        <p class="heading">Research</p>
+                        <div class="container">
+                            <!-- Item 1 -->
+                            <div class="title">
+                                <div class="date">
+                                    <div>01/01/25</div>
+                                    <div>05/01/25</div>
+                                </div>
+                                <p class="title-role">
+                                    Research Assistant at Plural Connections
+                                    Group
+                                </p>
+                            </div>
+                            <p class="desc">
+                                Same desc. as Research Engineer position at
+                                Plural Connections Group under Professional
+                                Experience.
+                            </p>
+                            <!-- Item 1 -->
+                            <div class="title">
+                                <div class="date">
+                                    <div>05/01/23</div>
+                                    <div>12/31/24</div>
+                                </div>
+                                <p class="title-role">
+                                    Research Assistant to Professor Daniel
+                                    Patterson
+                                </p>
+                            </div>
+                            <p class="desc">
+                                Proposing an environment to prevent automation
+                                bias for integrated human-AI optimized Python
+                                programming leveraging ChatGPT API. Built
+                                prototype and deployed it to be used by 50
+                                students in a lab. Submitted paper to The Art,
+                                Science, and Engineering of Programming journal.
+                            </p>
+                            <div class="title">
+                                <div class="date">
+                                    <div>01/01/24</div>
+                                    <div>05/11/24</div>
+                                </div>
+                                <p class="title-role">
+                                    Human Autonomy in Digital Social Networks
+                                    and Recommender Systems
+                                </p>
+                            </div>
+                            <p class="desc">
+                                Independent research project advised by
+                                Professor Patterson exploring autonomy, a new
+                                framework for defining of autonomy, and applying
+                                it to social media platforms that use
+                                recommender systems. Created and presented
+                                poster at RISE Undergraduate Conference
+                                Presentation on April 11th, 2024.
+                            </p>
+                            <div class="title">
+                                <div class="date">
+                                    <div>01/01/21</div>
+                                    <div>07/27/22</div>
+                                </div>
+                                <p class="title-role">
+                                    Computer Science Researcher at MIT CSAIL
+                                </p>
+                            </div>
+                            <p class="desc">
+                                Invented research paper on secure hardware to
+                                ensure digital ownership on virtual objects
+                                using crytopgrahy. Specified 3 security
+                                mechanisms to unwanted side-channels and logic
+                                using cryptographic protocols analysis.
+                            </p>
+                        </div>
+                        <p class="heading">Written Work</p>
+                        <div class="container">
+                            <!-- Item 1 -->
+                            <div class="title">
+                                <div class="date">
+                                    <div>11/17/23</div>
+                                    <div>12/08/23</div>
+                                </div>
+                                <p class="title-role">
+                                    Erosion of Autonomy in Algorithmic
+                                    Recommendation Systems
+                                </p>
+                            </div>
+                            <p class="desc">
+                                A dissection of the erosion of autonomy in
+                                algorithmic recommendation systems, how they are
+                                incompatible, and state an urgency of legal
+                                action.
+                            </p>
+                            <!-- Item 1 -->
+                            <div class="title">
+                                <div class="date">
+                                    <div>10/23/23</div>
+                                    <div>11/08/23</div>
+                                </div>
+                                <p class="title-role">
+                                    Free Speech is a Triangle Literature Review
+                                </p>
+                            </div>
+                            <p class="desc">
+                                A summary of the Jack Balkin piece "Free Speech
+                                is a Triangle," where I propose a technological
+                                solution of using decentralized social platforms
+                                to safeguard users' freedom of speech against
+                                what he deemed "new-speech regulation" harms.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- MY TECHNICAL PORTFOLIO-->
+                    <div id="technical-view-body" class="not-selected">
+                        <p class="heading">
+                            Deeper Look into Technical Projects
+                        </p>
+                        <div class="container">
+                            <!-- Item 1 -->
+                            <div class="title">
+                                <div class="date">
+                                    <div>09/01/2024</div>
+                                    <div>012/19/2024</div>
+                                </div>
+                                <p class="title-role">
+                                    Social Cues Intervention on Reddit-Like
+                                    Platform @ Plural Connections Group
+                                </p>
+                            </div>
+                            <p class="desc">
+                                Deployed and developed full-stack app on AWS
+                                mimicking Reddit to test hypothesis on use of
+                                social cues to increase intellectual humility in
+                                online discussions on U.S. politics. Used React,
+                                Flask, AWS EC2, and MongoDB for web development,
+                                and worked closely with Dartmouth NLP Group to
+                                develop and fine-tune an intellectual humility
+                                classifier on political speech. Worked on k-shot
+                                learning and prompt engineering ChatGPT to
+                                improve classification and the intervention.
+                            </p>
+                            <!-- Item 1 -->
+                            <div class="title">
+                                <div class="date">
+                                    <div>05/01/2024</div>
+                                    <div>08/30/2024</div>
+                                </div>
+                                <p class="title-role">
+                                    Truth Agent @ Google Gemini Developer
+                                    Competition
+                                </p>
+                            </div>
+                            <div>
+                                <p class="desc">
+                                    Pioneering browser extention AI system to
+                                    foster critical thinking skills by measuring
+                                    real-time online misinformation on the page.
+                                    Submitted to Google Gemini Developer
+                                    Competition, pending results.
+                                </p>
+                                <p class="desc">
+                                    <link
+                                        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+                                        rel="stylesheet"
+                                    />
+                                    <a
+                                        href="https://github.com/RachelJiarui/TruthAgent"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <i class="fab fa-github"></i> GitHub
+                                        link to Truth Agent
+                                    </a>
+                                </p>
+                            </div>
+                            <!-- Item 1 -->
+                            <div class="title">
+                                <div class="date">
+                                    <div>03/29/2024</div>
+                                    <div>03/30/2024</div>
+                                </div>
+                                <p class="title-role">
+                                    EduFlex @ NU AI Hackathon
+                                </p>
+                            </div>
+                            <div>
+                                <p class="desc">
+                                    1st Place Winner. Empowering public free
+                                    online computer science education to lower
+                                    the barrier of entry for low-income students
+                                    who don’t have access to prestigious
+                                    university resources using NLP.
+                                </p>
+                                <p class="desc">
+                                    <link
+                                        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+                                        rel="stylesheet"
+                                    />
+                                    <a
+                                        href="https://github.com/RachelJiarui/EduFlex"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <i class="fab fa-github"></i> GitHub
+                                        link to EduFlex
+                                    </a>
+                                </p>
+                            </div>
+                            <!-- Item 1 -->
+                            <div class="title">
+                                <div class="date">
+                                    <div>03/01/2024</div>
+                                    <div>04/10/2024</div>
+                                </div>
+                                <p class="title-role">Tripartite Soul AI</p>
+                            </div>
+                            <div>
+                                <p class="desc">
+                                    Diagnosis your tripartite soul and speak
+                                    with Plato to make your soul most just. Uses
+                                    Plato's Republic and his dialogues.
+                                </p>
+                                <p class="desc">
+                                    <link
+                                        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+                                        rel="stylesheet"
+                                    />
+                                    <a
+                                        href="https://github.com/RachelJiarui/TripartiteSoulAI"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <i class="fab fa-github"></i> GitHub
+                                        link to Tripartite Soul AI
+                                    </a>
+                                </p>
+                            </div>
+                            <!-- Item 1 -->
+                            <div class="title">
+                                <div class="date">
+                                    <div>10/01/2023</div>
+                                    <div>11/10/2023</div>
+                                </div>
+                                <p class="title-role">Hexagonal Othello Game</p>
+                            </div>
+                            <div>
+                                <p class="desc">
+                                    Built the game Othello on a hexagonal board
+                                    using Java and Java Swing. Used
+                                    model-view-controller and adapter
+                                    object-oriented design pattern.
+                                </p>
+                                <p class="desc">
+                                    <link
+                                        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+                                        rel="stylesheet"
+                                    />
+                                    <a
+                                        href="https://github.com/RachelJiarui/cs3500-othello"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <i class="fab fa-github"></i> GitHub
+                                        link to Othello
+                                    </a>
+                                </p>
+                            </div>
+                            <!-- Item 1 -->
+                            <div class="title">
+                                <div class="date">
+                                    <div>05/01/23</div>
+                                    <div>Present</div>
+                                </div>
+                                <p class="title-role">Synth Research</p>
+                            </div>
+                            <p class="desc">
+                                Created prototype which queries python code from
+                                ChatGPT to match function specification. Wrote
+                                testing system which requeries ChatGPT with
+                                error messages with faulty implementations.
+                                Deployed Blackjack Game lab for 50 students to
+                                use to test the prototype and provide feedback
+                                on their experience.
+                            </p>
+                            <!-- Item 1 -->
+                            <div class="title">
+                                <div class="date">
+                                    <div>05/15/23</div>
+                                    <div>07/01/23</div>
+                                </div>
+                                <p class="title-role">
+                                    Ampion Web App Reconfiguration
+                                </p>
+                            </div>
+                            <p class="desc">
+                                Worked closely with marketing and design teams
+                                to implement design of new modern website
+                                navigation bar. Improved internal system
+                                operations by connecting webpages to DatoCMS,
+                                Content Management System. Configured URLs,
+                                landing pages, metadata based on best Search
+                                Engine Optimization practices.
+                            </p>
+                            <!-- Item 2 -->
+                            <div class="title">
+                                <div class="date">
+                                    <div>01/01/2020</div>
+                                    <div>07/27/2022</div>
+                                </div>
+                                <p class="title-role">
+                                    Non-Fungible Objects (NFO):
+                                    Hard-to-Counterfeit Virtual Assets Based On
+                                    Trusted-Hardware
+                                </p>
+                            </div>
+                            <div>
+                                <p class="desc">
+                                    Research that introduces a new technology
+                                    for virtual assets by securely tying their
+                                    initialization, development and exchange to
+                                    our secure hardware. We assert that our
+                                    version of virtual ownership is stronger
+                                    than Non-Fungible Tokens' (NFT) version.
+                                </p>
+                                <p class="desc">
+                                    <link
+                                        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+                                        rel="stylesheet"
+                                    />
+                                    <a
+                                        href="https://www.linkedin.com/in/racheljiarui/details/experience/1635500946109/single-media-viewer/?profileId=ACoAADUl5isBc8bqmuKzrJfKVEqnDS65--gjTvg"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <i class="fab fa-linkedin"></i> LinkedIn
+                                        link to view paper
+                                    </a>
+                                </p>
+                            </div>
+                            <!-- Item 3 -->
+                            <div class="title">
+                                <div class="date">
+                                    <div>04/20/23</div>
+                                    <div>05/01/23</div>
+                                </div>
+                                <p class="title-role">
+                                    High Resolution Image Cropping
+                                </p>
+                            </div>
+                            <p class="desc">
+                                Tool to crop images without losing resolution.
+                                Used optimized graph traversal techniques and
+                                object-oriented design principles to remove
+                                seams of the least important pixels on an image,
+                                preventing loss of resolution quality of the
+                                image when cropping.
+                            </p>
+                            <!-- Item 4 -->
+                            <div class="title">
+                                <div class="date">
+                                    <div>02/01/2023</div>
+                                    <div>05/15/2023</div>
+                                </div>
+                                <p class="title-role">
+                                    Multilingual Speech Generation
+                                </p>
+                            </div>
+                            <p class="desc">
+                                Lowers the language barrier by enabling
+                                personalized conversation, which can provide
+                                speakers of other languages better access to
+                                fair education, employment, public services, and
+                                medical attention. Achieved 83% speech
+                                identification accuracy using a KNN model and
+                                through researching zero-shot generation.
+                            </p>
+                            <!-- Add more here -->
+                        </div>
+                    </div>
                 </div>
-                <p class="title-role">Tripartite Soul AI</p>
             </div>
-            <div>
-                <p class="desc">Diagnosis your tripartite soul and speak with Plato to make your soul most just. Uses Plato's Republic and his dialogues.</p>
-                <p class="desc">
-                    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-                    <a href="https://github.com/RachelJiarui/TripartiteSoulAI" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-github"></i> GitHub link to Tripartite Soul AI
-                    </a>
-                </p>
-            </div>
-            <!-- Item 1 -->
-            <div class="title">
-                <div class="date">
-                <div>10/01/2023</div>
-                <div>11/10/2023</div>
-                </div>
-                <p class="title-role">Hexagonal Othello Game</p>
-            </div>
-            <div>
-                <p class="desc">Built the game Othello on a hexagonal board using Java and Java Swing. Used model-view-controller and adapter object-oriented design pattern.</p>
-                <p class="desc">
-                    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-                    <a href="https://github.com/RachelJiarui/cs3500-othello" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-github"></i> GitHub link to Othello
-                    </a>
-                </p>
-            </div>
-            <!-- Item 1 -->
-            <div class="title">
-                <div class="date">
-                <div>05/01/23</div>
-                <div>Present</div>
-                </div>
-                <p class="title-role">Synth Research</p>
-            </div>
-            <p class="desc">Created prototype which queries python code from ChatGPT to match function specification. Wrote testing system which requeries ChatGPT with error messages with faulty implementations. Deployed Blackjack Game lab for 50 students to use to test the prototype and provide feedback on their experience.</p>
-            <!-- Item 1 -->
-            <div class="title">
-                <div class="date">
-                <div>05/15/23</div>
-                <div>07/01/23</div>
-                </div>
-                <p class="title-role">Ampion Web App Reconfiguration</p>
-            </div>
-            <p class="desc">Worked closely with marketing and design teams to implement design of new modern website navigation bar. Improved internal system operations by connecting webpages to DatoCMS, Content Management System. Configured URLs, landing pages, metadata based on best Search Engine Optimization practices.</p>
-            <!-- Item 2 -->
-            <div class="title">
-                <div class="date">
-                <div>01/01/2020</div>
-                <div>07/27/2022</div>
-                </div>
-                <p class="title-role">Non-Fungible Objects (NFO): Hard-to-Counterfeit Virtual Assets Based On Trusted-Hardware</p>
-            </div>
-            <div>
-                <p class="desc">Research that introduces a new technology for virtual assets by securely tying their initialization, development and exchange to our secure hardware. We assert that our version of virtual ownership is stronger than Non-Fungible Tokens' (NFT) version.</p>
-                <p class="desc">
-                    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-                    <a href="https://www.linkedin.com/in/racheljiarui/details/experience/1635500946109/single-media-viewer/?profileId=ACoAADUl5isBc8bqmuKzrJfKVEqnDS65--gjTvg" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-linkedin"></i> LinkedIn link to view paper
-                    </a>
-                </p>
-            </div>
-            <!-- Item 3 -->
-            <div class="title">
-                <div class="date">
-                <div>04/20/23</div>
-                <div>05/01/23</div>
-                </div>
-                <p class="title-role">High Resolution Image Cropping</p>
-            </div>
-            <p class="desc">Tool to crop images without losing resolution. Used optimized graph traversal techniques and object-oriented design principles to remove seams of the least important pixels on an image, preventing loss of resolution quality of the image when cropping.</p>
-            <!-- Item 4 -->
-            <div class="title">
-                <div class="date">
-                <div>02/01/2023</div>
-                <div>05/15/2023</div>
-                </div>
-                <p class="title-role">Multilingual Speech Generation</p>
-            </div>
-            <p class="desc">Lowers the language barrier by enabling personalized conversation, which can provide speakers of other languages better access to fair education, employment, public services, and medical attention. Achieved 83% speech identification accuracy using a KNN model and through researching zero-shot generation.</p>
-            <!-- Add more here -->
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
-    <script src="https://kit.fontawesome.com/541ddf6aa0.js" crossorigin="anonymous"></script>
-	  <script src="index.js"></script>
-  </body>
+        <script
+            src="https://kit.fontawesome.com/541ddf6aa0.js"
+            crossorigin="anonymous"
+        ></script>
+        <script src="index.js"></script>
+    </body>
 </html>
