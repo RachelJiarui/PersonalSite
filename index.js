@@ -1,3 +1,22 @@
+const ruminationDictionary = {
+  TEST: {
+    1: "1Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    2: "2Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    3: "3An unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    4: "4Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    5: "5Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    6: "6Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    7: "7Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+  },
+};
+
+const ruminationFootNotes = {
+  TEST: {
+    1: "Footnote 1 Footnote 1 Footnawdawdaiojdao;iwjd;aoiwjd;aiwdote 1 Footnote 1 Footnote 1 Footnote 1 Footnote 1 Footnote 1 Footnote 1 Footnote 1 Footnote 1",
+    4: "Footnote 4 Footnote 4 Footnote 4 Footnote 4asjda adajwoidjao;wjd;aj;wdia adwadaw 4 Footnote 4 Footnote 4 Footnote 4 Footnote 4 Footnote 4 Footnote 4 Footnote 4 Footnote 4 Footnote 4",
+  },
+};
+
 function select() {
   document.getElementById("table-view").classList.toggle("selected");
   document.getElementById("gallery-view").classList.toggle("selected");
@@ -93,12 +112,36 @@ document.addEventListener("DOMContentLoaded", () => {
   const readerBody = document.getElementById("reader-body");
 
   document.querySelectorAll(".rumination-box").forEach((box) => {
-    box.addEventListener("click", () => {
+    box.addEventListener("click", async () => {
       const title = box.querySelector(".rumination-title")?.innerText || "";
-      const desc = box.querySelector(".rumination-desc")?.innerText || "";
+      const paragraphs = ruminationDictionary[title];
+      const footnotes = ruminationFootNotes[title] || {};
 
       readerTitle.innerText = title;
-      readerBody.innerHTML = `<p>${desc}</p>`;
+
+      if (!paragraphs) {
+        readerBody.innerHTML = `<p class="rumination-paragraph">Work in progress. Come back later. Work in progress. Come back later. Work in progress. Come back later. Work in progress. Come back later. Work in progress. Come back later. Work in progress. Come back later. Work in progress. Come back later. Work in progress. Come back later. Work in progress. Come back later. Work in progress. Come back later. Work in progress. Come back later. Work in progress. Come back later. Work in progress. Come back later. Work in progress. Come back later. Work in progress. Come back later. Work in progress. Come back later. Work in progress. Come back later. Work in progress. Come back later. Work in progress. Come back later. Work in progress. Come back later. Work in progress. Come back later. Work in progress. Come back later. Work in progress. Come back later. Work in progress. Come back later. Work in progress. Come back later. Work in progress. Come back later. Work in progress. Come back later. Work in progress. Come back later. Work in progress. Come back later. Work in progress. Come back later. Work in progress. Come back later. Work in progress. Come back later. Work in progress. Come back later. Work in progress. Come back later. Work in progress. Come back later. Work in progress. Come back later. Work in progress. Come back later. Work in progress. Come back later. Work in progress. Come back later. Work in progress. Come back later. Work in progress. Come back later. Work in progress. Come back later.</p>`;
+      } else {
+        readerBody.innerHTML = Object.entries(paragraphs)
+          .map(([index, text]) => {
+            const footnote = footnotes[index];
+            const hasFootnote = footnote !== undefined;
+
+            const footnoteHTML = hasFootnote
+              ? `<span class="footnote ${
+                  index % 2 === 0 ? "left" : "right"
+                }">[${index}] ${footnote}</span>`
+              : "";
+
+            return `
+              <div class="paragraph-wrapper">
+                ${index % 2 === 0 ? footnoteHTML : ""}
+                <p class="rumination-paragraph">${text}</p>
+                ${index % 2 !== 0 ? footnoteHTML : ""}
+              </div>`;
+          })
+          .join("");
+      }
 
       // Reset visibility
       reader.style.display = "block";
