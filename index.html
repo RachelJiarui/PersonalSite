@@ -21,8 +21,8 @@
                 <!-- First column headers (2 titles) -->
                 <div class="header">
                     <div class="container">
-                        <div>Current Status</div>
-                        <div>About Me</div>
+                        <div>CURRENT STATUS</div>
+                        <div>ABOUT ME</div>
                     </div>
                 </div>
                 <hr />
@@ -130,7 +130,7 @@
                 <!-- First column headers (3 titles) -->
                 <div class="container header-container">
                     <div class="header-left">
-                        <div id="table-view">Explore Me</div>
+                        <div id="table-view">EXPLORE ME</div>
                     </div>
                 </div>
                 <hr />
@@ -168,6 +168,13 @@
                                 id="media"
                             >
                                 My Favorite Media
+                            </div>
+                            <div
+                                onClick="selectRuminations()"
+                                class="clickable menu-item"
+                                id="ruminations"
+                            >
+                                My Ruminations
                             </div>
                         </div>
                     </div>
@@ -326,7 +333,7 @@
 
                     <!-- MY CV -->
                     <div id="table-view-body" class="not-selected">
-                        <p class="heading">Professional Experience</p>
+                        <p class="heading">PROFESSIONAL EXPERIENCE</p>
                         <div class="container">
                             <!-- Item 1 -->
                             <div class="title">
@@ -389,7 +396,7 @@
                                 Seo.
                             </p>
                         </div>
-                        <p class="heading">Leadership Roles</p>
+                        <p class="heading">LEADERSHIP ROLES</p>
                         <div class="container">
                             <!-- Item 1 -->
                             <div class="title">
@@ -455,7 +462,7 @@
                             </p>
                             <!-- Add here -->
                         </div>
-                        <p class="heading">Research</p>
+                        <p class="heading">RESEARCH</p>
                         <div class="container">
                             <!-- Item 1 -->
                             <div class="title">
@@ -525,7 +532,7 @@
                                 using cryptographic protocols analysis.
                             </p>
                         </div>
-                        <p class="heading">Written Work</p>
+                        <p class="heading">WRITTEN WORK</p>
                         <div class="container">
                             <!-- Item 1 -->
                             <div class="title">
@@ -567,7 +574,7 @@
                     <!-- MY TECHNICAL PORTFOLIO-->
                     <div id="technical-view-body" class="not-selected">
                         <p class="heading">
-                            Deeper Look into Technical Projects
+                            DEEPER LOOK INTO TECHNICAL PROJECTS
                         </p>
                         <div class="container">
                             <!-- Item 1 -->
@@ -723,7 +730,7 @@
                             <div class="title">
                                 <div class="date">
                                     <div>05/01/23</div>
-                                    <div>Present</div>
+                                    <div>09/01/24</div>
                                 </div>
                                 <p class="title-role">Synth Research</p>
                             </div>
@@ -831,6 +838,80 @@
                             <!-- Add more here -->
                         </div>
                     </div>
+
+                    <!-- MY RUMINATION -->
+                    <div id="ruminations-view-body" class="not-selected">
+                        <div class="container ruminations-container">
+                            <div class="rumination-box clickable">
+                                <div class="rumination-title">
+                                    Why Read Philosophy at All?
+                                </div>
+                                <div class="rumination-desc">
+                                    An argument for the value of thinking slowly
+                                    and deeply, even in a fast-moving world.
+                                </div>
+                                <div class="rumination-meta">
+                                    <span>892 words</span>
+                                    <span>March 14, 2024</span>
+                                </div>
+                            </div>
+
+                            <div class="rumination-box clickable">
+                                <div class="rumination-title">
+                                    On Technology and the Self
+                                </div>
+                                <div class="rumination-desc">
+                                    How technological systems both fragment and
+                                    reinforce our identities.
+                                </div>
+                                <div class="rumination-meta">
+                                    <span>1,421 words</span>
+                                    <span>February 22, 2024</span>
+                                </div>
+                            </div>
+
+                            <div class="rumination-box clickable">
+                                <div class="rumination-title">
+                                    Digital Silence and Noise
+                                </div>
+                                <div class="rumination-desc">
+                                    When everything speaks, nothing is heard. A
+                                    meditation on finding signal in the noise.
+                                </div>
+                                <div class="rumination-meta">
+                                    <span>764 words</span>
+                                    <span>January 9, 2024</span>
+                                </div>
+                            </div>
+
+                            <div class="rumination-box clickable">
+                                <div class="rumination-title">
+                                    Notes on a Talk with Dad
+                                </div>
+                                <div class="rumination-desc">
+                                    A quiet conversation about sacrifice,
+                                    ambition, and the life we choose to
+                                    remember.
+                                </div>
+                                <div class="rumination-meta">
+                                    <span>1,006 words</span>
+                                    <span>November 30, 2023</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="rumination-reader" class="overlay">
+            <div class="reader-content">
+                <button id="back-button">← back</button>
+                <div id="reader-title" class="reader-title"></div>
+                <div id="reader-body" class="reader-body">
+                    <p>
+                        This is a sample article content. You’ll load full text
+                        here eventually.
+                    </p>
                 </div>
             </div>
         </div>

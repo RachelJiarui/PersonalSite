@@ -1,6 +1,6 @@
 body {
     font-family: "Chivo", sans-serif;
-    font-size: 13.5px;
+    font-size: 14px;
 }
 
 p {
@@ -8,6 +8,38 @@ p {
     margin: 0px;
     padding: 0px;
     word-break: break-all;
+}
+
+.ruminations-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-height: 60vh;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.rumination-title {
+    text-transform: uppercase;
+    border-bottom: 1px solid;
+    padding-bottom: 6px;
+}
+
+.rumination-box {
+    border-radius: 6px;
+    background-color: white;
+    margin-bottom: 32px;
+}
+
+.rumination-desc {
+    margin-top: 6px;
+    margin-bottom: 8px;
+}
+
+.rumination-meta {
+    display: flex;
+    justify-content: space-between;
+    font-style: italic;
 }
 
 .title-role {
@@ -222,4 +254,85 @@ hr {
 
 .icon-padding {
     padding-right: 5px;
+}
+
+/* Overlay styling */
+#rumination-reader {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    z-index: 9999;
+    overflow-y: auto;
+    transition: top 0.7s ease-in-out;
+    display: none; /* Hidden by default */
+}
+
+#rumination-reader.show {
+    top: 0;
+    display: block;
+}
+
+.reader-content {
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#back-button {
+    background: none;
+    border: 1px solid white;
+    color: white;
+    font-size: 14px;
+    padding: 6px 12px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+#back-button:hover {
+    background-color: white;
+    color: black;
+}
+
+@keyframes slideDown {
+    from {
+        top: -100%;
+    }
+    to {
+        top: 0;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        top: 0;
+    }
+    to {
+        top: -100%;
+    }
+}
+
+#rumination-reader {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #252627;
+    color: white;
+    z-index: 9999;
+    overflow-y: auto;
+    display: none;
+}
+
+#rumination-reader.showing {
+    display: block;
+    animation: slideDown 0.6s ease forwards;
+}
+
+#rumination-reader.hiding {
+    animation: slideUp 0.6s ease forwards;
 }
