@@ -106,26 +106,52 @@ document.querySelectorAll(".menu-item").forEach((item) => {
   });
 });
 
-function setupRuminationClicks() {
-  document.querySelectorAll(".rumination-box").forEach((box) => {
-    box.addEventListener("click", () => {
-      const title = box.querySelector(".rumination-title")?.innerText || "";
-      const body = box.querySelector(".rumination-desc")?.innerText || "";
+function setupTechnicalClicks() {
+  const reader = document.getElementById("technical-reader");
+  const readerTechTitle = document.getElementById("reader-tech-title");
+  const projectLink = document.getElementById("project-link");
+  const readerSubtitle = document.getElementById("reader-subtitle");
+  const readerPurposeBody = document.getElementById("reader-purpose-body");
+  const readerDesignBody = document.getElementById("reader-design-body");
+  const readerReflectionsBody = document.getElementById(
+    "reader-reflections-body",
+  );
 
-      // Populate reader with content
+  const backBtn = document.getElementById("back-tech-button");
+
+  document.querySelectorAll(".technical-box").forEach((box) => {
+    box.addEventListener("click", () => {
+      const title = box.querySelector(".title-role")?.innerText || "";
+      const body = box.querySelector(".desc")?.innerText || "";
+
       document.getElementById("reader-title").innerText = title;
       document.getElementById("reader-body").innerHTML = `<p>${body}</p>`;
 
-      // Show animation
-      document.getElementById("rumination-reader").classList.add("show");
+      const reader = document.getElementById("technical-reader");
+      reader.style.display = "block";
+      void reader.offsetWidth;
+      reader.classList.remove("hiding");
+      reader.classList.add("showing");
     });
+  });
+
+  backBtn.addEventListener("click", () => {
+    reader.classList.remove("showing");
+    reader.classList.add("hiding");
+
+    // Wait for the animation to finish
+    setTimeout(() => {
+      reader.classList.remove("hiding");
+      reader.style.display = "none";
+
+      // Reset showing class to allow reanimation next time
+      void reader.offsetWidth; // Trick to force reflow
+    }, 600);
   });
 }
 
-// Run once on load
-setupRuminationClicks();
-
 document.addEventListener("DOMContentLoaded", () => {
+  setupTechnicalClicks();
   const reader = document.getElementById("rumination-reader");
   const backBtn = document.getElementById("back-button");
   const readerTitle = document.getElementById("reader-title");
