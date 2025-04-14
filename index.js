@@ -18,15 +18,19 @@ const ruminationFootNotes = {
 };
 
 function select() {
-  document.getElementById("table-view").classList.toggle("selected");
+  document.getElementById("table-view").classList.toggle("not-selected");
   document.getElementById("gallery-view").classList.toggle("selected");
   document.getElementById("table-view").classList.toggle("not-selected");
   document.getElementById("gallery-view").classList.toggle("not-selected");
+  document.getElementById("ruminations-view").classList.add("not-selected");
 
-  document.getElementById("table-view-body").classList.toggle("selected");
+  document.getElementById("table-view-body").classList.toggle("not-selected");
   document.getElementById("gallery-view-body").classList.toggle("selected");
   document.getElementById("table-view-body").classList.toggle("not-selected");
   document.getElementById("gallery-view-body").classList.toggle("not-selected");
+  document
+    .getElementById("ruminations-view-body")
+    .classList.add("not-selected");
 }
 
 function selectResume() {
@@ -38,6 +42,11 @@ function selectResume() {
 
   document.getElementById("technical-view-body").classList.add("not-selected");
   document.getElementById("technical-view-body").classList.remove("selected");
+
+  document
+    .getElementById("ruminations-view-body")
+    .classList.add("not-selected");
+  document.getElementById("ruminations-view-body").classList.remove("selected");
 }
 
 function selectMedia() {
@@ -49,6 +58,11 @@ function selectMedia() {
 
   document.getElementById("technical-view-body").classList.add("not-selected");
   document.getElementById("technical-view-body").classList.remove("selected");
+
+  document
+    .getElementById("ruminations-view-body")
+    .classList.add("not-selected");
+  document.getElementById("ruminations-view-body").classList.remove("selected");
 }
 
 function selectRuminations() {
@@ -78,6 +92,11 @@ function selectTechnical() {
 
   document.getElementById("gallery-view-body").classList.add("not-selected");
   document.getElementById("gallery-view-body").classList.remove("selected");
+
+  document
+    .getElementById("ruminations-view-body")
+    .classList.add("not-selected");
+  document.getElementById("ruminations-view-body").classList.remove("selected");
 }
 
 document.querySelectorAll(".menu-item").forEach((item) => {
@@ -86,6 +105,7 @@ document.querySelectorAll(".menu-item").forEach((item) => {
     item.classList.add("selected");
   });
 });
+
 function setupRuminationClicks() {
   document.querySelectorAll(".rumination-box").forEach((box) => {
     box.addEventListener("click", () => {
