@@ -69,6 +69,14 @@ a:hover {
     color: grey;
 }
 
+a.invert {
+    color: white;
+}
+
+a.invert:hover {
+    color: lightgray;
+}
+
 hr {
     margin-top: 6px;
     margin-bottom: 6px;
@@ -264,6 +272,13 @@ hr {
 .reader-title {
     margin-top: 40px;
     margin-bottom: 120px;
+    text-transform: uppercase;
+}
+
+.reader-tech-title {
+    margin-top: 40px;
+    margin-bottom: 80px;
+    text-transform: uppercase;
 }
 
 .reader-subtitle {
@@ -337,7 +352,7 @@ hr {
     position: relative;
 }
 
-.footnote {
+.sidenote {
     position: absolute;
     top: 0;
     width: 200px;
@@ -345,12 +360,12 @@ hr {
     word-break: break-all;
 }
 
-.footnote.left {
+.sidenote.left {
     right: 108%;
     text-align: right;
 }
 
-.footnote.right {
+.sidenote.right {
     left: 108%;
     text-align: left;
 }
@@ -374,4 +389,19 @@ hr {
 
 .technical-box .title {
     margin: 0;
+}
+
+.technical-image-container {
+    width: 100%;
+    height: auto;
+    overflow: visible; /* no need to clip */
+    text-align: center; /* center image if it's smaller than full width */
+    margin: 20px 0;
+}
+
+.technical-image {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain; /* ensures entire image is shown */
+    display: inline-block;
 }
