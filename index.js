@@ -321,6 +321,22 @@ function setupTechnicalClicks() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  // Entrance overlay functionality
+  const entranceOverlay = document.getElementById("entrance-overlay");
+  const enterButton = document.getElementById("enter-website-btn");
+  
+
+  
+  enterButton.addEventListener("click", () => {
+    // Slide the overlay up to reveal the website behind it
+    entranceOverlay.classList.add("slide-up");
+    
+    // After animation completes, hide overlay completely
+    setTimeout(() => {
+      entranceOverlay.style.display = "none";
+    }, 800);
+  });
+  
   setupTechnicalClicks();
   const reader = document.getElementById("rumination-reader");
   const backBtn = document.getElementById("back-button");
