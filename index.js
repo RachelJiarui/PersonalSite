@@ -44,6 +44,20 @@ const ruminationDictionary = {
     4: "Education is to develop critical and free thinking such that each one of us can pursue the truth. We do this for the mission to make beautiful things, to find what’s possible, and to do good. This is a mission that should be defined uniquely by each individual and their lived experiences, guided but never dictated by anyone else but that individual. A lot of people’s purposes today, however, is defined by factors outside of this mission: What makes them the most money, what is more prestigious, etc. The Beautiful, The Possibilities and The Good are commonly not priorities in today’s student body, and oftentimes rightfully so given their circumstances (socioeconomic, etc.)",
     5: "My hope is that education will one day be able to serve these purposes wholly. And that tools like artificial intelligence brings us closer to this ideal, not away. Today, AI tools make knowledge more accessible and help automate intermediary tasks that don’t directly contribute to a person’s core mission. But it also threatens opportunities for growth in critical thinking, the exchange of diverse perspectives, and the space for leisure, play, and reflection—essential ingredients for creativity. Communities, policy, classrooms, and the individual all play a part in defining this future. We must remember that education is not merely the transfer of information—it never was. If we are to embrace the tools of artificial intelligence, we must do so with respect for what cannot be automated: the spark in a teacher’s eye when they call an equation beautiful; the magical moment when an idea first clicks; the slow, quiet shaping of a mind that dares to ask its own questions. Let us choose, again and again, to make education a place where the beautiful, the possible, and the good remain our highest aims.",
   },
+  "MY VALUES SO FAR": {
+    1: "One major part of my mental health journey and discovering what will make a fulfilling career is living life value-driven. Values are the motifs that structure our every action. They are not merely goals; they are the reasons for those goals. And not just reasons for goals, but reasons to do the hard things in life. To keep persisting despite it all.",
+    2: "I found that last bit particularly motivating when in some of my darkest moments, I felt myself wondering whether I could bear the anxiety, panic, the fear of my world as I experienced it.",
+    3: "It isn’t easy to define what our values are. It’s difficult to stop being drawn back to old nihilistic habits of thinking and easy to replace our values with goals; I want to make X amount of money, get Y jobs, and live at Z. These are far more tangible and relatable to our most primitive motivators like the feelings of pride, pleasure, etc. But these aren’t reasons to live our lifetime. In fact, at the end of these goals—say you reach them—is actually quite empty. You hear stories of people who became millionaires quick but felt not much more fulfillment than the average joe, and while that may sound insufferable, one could relate by reflecting on some of our own past goals that we’ve achieved, and yet we still find ourselves living in unsatisfactory ways.",
+    4: "This is all to say that I’ve made it an imperative goal of mine to define my values. Why do I do what I do? What will I be defined by?",
+    5: "For me, it’s important that “I do the most good I can” in my life. I will define what the means in the rest of my writings below:",
+    6: "Let us imagine a graph in which there are two axes, X and Y, where the X-axis represents the passage of time and Y represents the total amount of suffering in the world. Let us not assume that the calculation of this total amount of suffering in the world is merely a summation of a discrete number that represents each individual person's suffering at that point in time. How we can imagine this total being calculated is not what I want to talk about right now. In fact, it’s on purpose that I don’t define this because I don’t know how to, even theoretically so.",
+    7: "(Let me entertain a divergent into why I can’t define this. At face value, one might think that suffering is the combination of all the unwanted pain in the world. But, there is many unwanted pains that have resulted in great good in the world, e.g. people who go through mental health crisis can now talk about value-driven living. Thus, if suffering were to be defined as such, it would no longer be a metric I am trying to minimize, as that would also decrease some good in the world. Maybe a closer way to think of suffering is to think of it as the function of unwanted pain - positive outcome, each multiplied by some arbitrary weight based on how we want each value to impact the function. But even that doesn’t capture the complexity of measuring suffering as something I want to minimize, because there are certainly cases in which a huge positive outcome still doesn’t justify unwanted pains, e.g. Those Who Walk Away from Omelas. This function can be good heuristic, though, to understand a semblance of what suffering might be.",
+    8: "Imagine that there is a trajectory on this graph that can represent the world history without the existence of myself. However, with the existence of myself, my existence should contain contributions such that the trajectory of this new graph, graph', never deviates too far up on the suffering axis, and overall, deviates below the original suffering axis.",
+    9: "This is one major part of what I think means that I did a good job in life. More neatly said: I better have roughly improved the quality of humanity's existence by existing. (This is an expectation that does not and should not apply to everyone; I believe I should be held to this expectation because I likely lie within the top 1% of privilege—the combination of how well my social, economic, familial/relationship, health, personal preferences align myself with access to resources for a good life)",
+    10: "The other part pertains to the duties and responsibilities of care I have as Rachel Chen, and how well I achieved those commitments. Some examples of such duties and responsibilities include my duty as a daughter (to take care of my parents as they age, to be a good sister, etc.), my responsibility as someone's best friend or partner, my responsibility as a teammate at a job, etc. How well I performed at each of these special responsibilities should also be considered along with the net improvement of all of the rest of humanity. The reason I point this out is because of the case in which there exists a person who was a bad, negligent father but who may have been a scientist who cured a disease—while he may have decreased overall suffering for all of humanity, there are certain qualities of integrity, loyalty, and other virtues which bind us to one another and make us worth fighting for one another's happiness, that he has failed to uphold.",
+    11: "This philosophy blends together the very utilitarian view of optimizing for some value of happiness with the feminist philosophy, the ethics of ethic, and substantive moral partialism + other arguments such as Socrates' preachings of the good being our virtues. How this blend interacts with one another (is it 50/50? Should one take priority over the other in different scenarios?) is a question I have remaining. Sometimes, the two support one another in their respective goals. Sometimes, they are at odds with one another. When the two are seemingly at odds with one another, what should one do?",
+    12: "While I’m figuring that bit out, this is how I’ll be living my life.",
+  },
 };
 
 const ruminationSidenotes = {
@@ -70,6 +84,10 @@ const ruminationSidenotes = {
     1: "Inspired by 1000 Manifestos Project, starting with The Manifesto Manifesto.",
     2: "ChatGPT Labs: The core of the Lab has been about sharing use cases—moments where ChatGPT made a meaningful or impactful difference in your day-to-day life. But around the edges of those use cases were your stories: moments where something new felt possible, and glimpses of the future you imagine with the power of AI in your hands.",
     3: "The Lab invited us to write “a bold, visionary, rebellious, or hopeful statement about the future of education. Your manifesto should make a clear and passionate case for what must change, what must endure, and what the next generation deserves.“",
+  },
+  "MY VALUES SO FAR": {
+    7: "Read 'Those Who Walk Away From Omelas here: https://shsdavisapes.pbworks.com/f/Omelas.pdf",
+    11: "Brogaard, Berit. Moral Partiality and Duties of Love. Philosophies, vol. 8, no. 5, 2023, p. 83. MDPI, https://doi.org/10.3390/philosophies8050083.",
   },
 };
 
@@ -324,19 +342,17 @@ document.addEventListener("DOMContentLoaded", () => {
   // Entrance overlay functionality
   const entranceOverlay = document.getElementById("entrance-overlay");
   const enterButton = document.getElementById("enter-website-btn");
-  
 
-  
   enterButton.addEventListener("click", () => {
     // Slide the overlay up to reveal the website behind it
     entranceOverlay.classList.add("slide-up");
-    
+
     // After animation completes, hide overlay completely
     setTimeout(() => {
       entranceOverlay.style.display = "none";
     }, 800);
   });
-  
+
   setupTechnicalClicks();
   const reader = document.getElementById("rumination-reader");
   const backBtn = document.getElementById("back-button");
