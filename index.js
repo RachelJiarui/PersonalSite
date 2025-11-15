@@ -205,6 +205,13 @@ function selectResume() {
     .getElementById("ruminations-view-body")
     .classList.add("not-selected");
   document.getElementById("ruminations-view-body").classList.remove("selected");
+
+  document
+    .getElementById("recommended-reads-view-body")
+    .classList.add("not-selected");
+  document
+    .getElementById("recommended-reads-view-body")
+    .classList.remove("selected");
 }
 
 function selectMedia() {
@@ -221,6 +228,13 @@ function selectMedia() {
     .getElementById("ruminations-view-body")
     .classList.add("not-selected");
   document.getElementById("ruminations-view-body").classList.remove("selected");
+
+  document
+    .getElementById("recommended-reads-view-body")
+    .classList.add("not-selected");
+  document
+    .getElementById("recommended-reads-view-body")
+    .classList.remove("selected");
 }
 
 function selectRuminations() {
@@ -237,6 +251,13 @@ function selectRuminations() {
     .getElementById("ruminations-view-body")
     .classList.remove("not-selected");
   document.getElementById("ruminations-view-body").classList.add("selected");
+
+  document
+    .getElementById("recommended-reads-view-body")
+    .classList.add("not-selected");
+  document
+    .getElementById("recommended-reads-view-body")
+    .classList.remove("selected");
 }
 
 function selectTechnical() {
@@ -255,6 +276,36 @@ function selectTechnical() {
     .getElementById("ruminations-view-body")
     .classList.add("not-selected");
   document.getElementById("ruminations-view-body").classList.remove("selected");
+
+  document
+    .getElementById("recommended-reads-view-body")
+    .classList.add("not-selected");
+  document
+    .getElementById("recommended-reads-view-body")
+    .classList.remove("selected");
+}
+
+function selectRecommendedReads() {
+  document.getElementById("gallery-view-body").classList.add("not-selected");
+  document.getElementById("gallery-view-body").classList.remove("selected");
+
+  document.getElementById("table-view-body").classList.add("not-selected");
+  document.getElementById("table-view-body").classList.remove("selected");
+
+  document.getElementById("technical-view-body").classList.add("not-selected");
+  document.getElementById("technical-view-body").classList.remove("selected");
+
+  document
+    .getElementById("ruminations-view-body")
+    .classList.add("not-selected");
+  document.getElementById("ruminations-view-body").classList.remove("selected");
+
+  document
+    .getElementById("recommended-reads-view-body")
+    .classList.remove("not-selected");
+  document
+    .getElementById("recommended-reads-view-body")
+    .classList.add("selected");
 }
 
 document.querySelectorAll(".menu-item").forEach((item) => {
