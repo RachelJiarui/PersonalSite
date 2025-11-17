@@ -177,24 +177,15 @@ const techProjectsSidenotes = {
 
 function select() {
   document.getElementById("table-view").classList.toggle("not-selected");
-  document.getElementById("gallery-view").classList.toggle("selected");
-  document.getElementById("table-view").classList.toggle("not-selected");
-  document.getElementById("gallery-view").classList.toggle("not-selected");
   document.getElementById("ruminations-view").classList.add("not-selected");
 
   document.getElementById("table-view-body").classList.toggle("not-selected");
-  document.getElementById("gallery-view-body").classList.toggle("selected");
-  document.getElementById("table-view-body").classList.toggle("not-selected");
-  document.getElementById("gallery-view-body").classList.toggle("not-selected");
   document
     .getElementById("ruminations-view-body")
     .classList.add("not-selected");
 }
 
 function selectResume() {
-  document.getElementById("gallery-view-body").classList.remove("selected");
-  document.getElementById("gallery-view-body").classList.add("not-selected");
-
   document.getElementById("table-view-body").classList.add("selected");
   document.getElementById("table-view-body").classList.remove("not-selected");
 
@@ -214,33 +205,7 @@ function selectResume() {
     .classList.remove("selected");
 }
 
-function selectMedia() {
-  document.getElementById("gallery-view-body").classList.remove("not-selected");
-  document.getElementById("gallery-view-body").classList.add("selected");
-
-  document.getElementById("table-view-body").classList.add("not-selected");
-  document.getElementById("table-view-body").classList.remove("selected");
-
-  document.getElementById("technical-view-body").classList.add("not-selected");
-  document.getElementById("technical-view-body").classList.remove("selected");
-
-  document
-    .getElementById("ruminations-view-body")
-    .classList.add("not-selected");
-  document.getElementById("ruminations-view-body").classList.remove("selected");
-
-  document
-    .getElementById("recommended-reads-view-body")
-    .classList.add("not-selected");
-  document
-    .getElementById("recommended-reads-view-body")
-    .classList.remove("selected");
-}
-
 function selectRuminations() {
-  document.getElementById("gallery-view-body").classList.add("not-selected");
-  document.getElementById("gallery-view-body").classList.remove("selected");
-
   document.getElementById("table-view-body").classList.add("not-selected");
   document.getElementById("table-view-body").classList.remove("selected");
 
@@ -269,9 +234,6 @@ function selectTechnical() {
   document.getElementById("table-view-body").classList.add("not-selected");
   document.getElementById("table-view-body").classList.remove("selected");
 
-  document.getElementById("gallery-view-body").classList.add("not-selected");
-  document.getElementById("gallery-view-body").classList.remove("selected");
-
   document
     .getElementById("ruminations-view-body")
     .classList.add("not-selected");
@@ -286,9 +248,6 @@ function selectTechnical() {
 }
 
 function selectRecommendedReads() {
-  document.getElementById("gallery-view-body").classList.add("not-selected");
-  document.getElementById("gallery-view-body").classList.remove("selected");
-
   document.getElementById("table-view-body").classList.add("not-selected");
   document.getElementById("table-view-body").classList.remove("selected");
 
