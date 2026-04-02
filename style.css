@@ -24,6 +24,28 @@ p {
     margin: 18px 0;
 }
 
+.rumination-paragraph ul,
+.rumination-paragraph ol {
+    margin: 8px 0;
+    padding-left: 1.4em;
+}
+
+.rumination-paragraph li {
+    margin-bottom: 4px;
+}
+
+.rumination-paragraph li ul,
+.rumination-paragraph li ol {
+    margin: 2px 0;
+}
+
+.rumination-paragraph blockquote {
+    margin: 20px 0;
+    padding: 4px 0 4px 12px;
+    border-left: 2px solid white;
+    color: inherit;
+}
+
 .rumination-title {
     text-transform: uppercase;
     border-bottom: 1px solid;
