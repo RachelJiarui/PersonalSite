@@ -15,8 +15,6 @@ p {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    max-height: 60vh;
-    overflow-y: auto;
     padding-right: 10px;
 }
 
@@ -48,14 +46,27 @@ p {
 
 .rumination-title {
     text-transform: uppercase;
-    border-bottom: 1px solid;
-    padding-bottom: 6px;
+    padding-bottom: 16px;
 }
 
 .rumination-box {
     border-radius: 6px;
     background-color: white;
     margin-bottom: 32px;
+}
+
+.rumination-cover {
+    width: 100%;
+    aspect-ratio: 5 / 4;
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid;
+    padding-bottom: 16px;
+    transition: filter 0.2s ease;
+}
+
+.rumination-box:hover .rumination-cover {
+    opacity: 0.7;
 }
 
 .rumination-desc {
@@ -85,6 +96,10 @@ p {
 a {
     text-decoration: none;
     color: black;
+}
+
+a:not([href*="github.com"]):not([href*="linkedin.com"]) {
+    font-style: italic;
 }
 
 a:hover {
@@ -282,9 +297,23 @@ hr {
     margin-bottom: 12px;
 }
 
+ul.desc {
+    margin-top: 0;
+    padding-left: 18px;
+    line-height: 1.2;
+}
+
+ul.desc li {
+    margin-bottom: 0;
+}
+
 .heading {
     margin-top: 30px;
     margin-bottom: 26px;
+}
+
+#recommended-reads-view-body .heading:first-child {
+    margin-top: 0;
 }
 
 .icon-padding {

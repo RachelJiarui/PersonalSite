@@ -506,4 +506,11 @@ document.addEventListener("DOMContentLoaded", () => {
       void reader.offsetWidth; // Trick to force reflow
     }, 600);
   });
+
+  document.querySelectorAll("a[href]").forEach((link) => {
+    if (!link.getAttribute("href").startsWith("#")) {
+      link.setAttribute("target", "_blank");
+      link.setAttribute("rel", "noopener noreferrer");
+    }
+  });
 });
