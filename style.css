@@ -312,8 +312,42 @@ ul.desc li {
     margin-bottom: 26px;
 }
 
-#recommended-reads-view-body .heading:first-child {
+#recommended-reads-view-body .rec-text-section:first-child .heading {
     margin-top: 0;
+}
+
+/* Recommended reads: two-column layout */
+.rec-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.rec-text-col {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Mobile-only images are hidden on desktop */
+.rec-image-mobile {
+    display: none;
+}
+
+/* Desktop image column: evenly stacked with consistent gap */
+.rec-img-col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.rec-img-col img {
+    width: 100%;
+}
+
+/* Hidden on desktop, shown on mobile */
+.mobile-only {
+    display: none;
 }
 
 .icon-padding {
@@ -547,4 +581,131 @@ ul.desc li {
     height: auto;
     object-fit: contain; /* ensures entire image is shown */
     display: inline-block;
+}
+
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+        font-size: 16px;
+    }
+
+    /* Single-column stacked layout */
+    .big-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* Hide vertical divider */
+    .big-container::before {
+        display: none;
+    }
+
+    /* Left panel: un-sticky so it scrolls with page */
+    .sticky {
+        position: static;
+    }
+
+    /* Right panel: natural document flow */
+    .scrollable {
+        max-height: none;
+        overflow-y: visible;
+    }
+
+    /* All inner two-column grids collapse to one column */
+    .container,
+    .header-left,
+    .header-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* CV date + role: stack instead of side by side */
+    .title {
+        grid-template-columns: 1fr;
+        gap: 2px;
+        margin-bottom: 4px;
+    }
+
+    /* Technical project cards: single column */
+    .technical-box {
+        grid-template-columns: 1fr;
+    }
+
+    /* Full-screen reader: comfortable mobile padding */
+    .reader-content {
+        max-width: 100%;
+        padding: 20px 16px;
+    }
+
+    /* Reader headings: reduce excessive vertical spacing */
+    .reader-title {
+        margin-bottom: 40px;
+    }
+
+    .reader-tech-title {
+        margin-bottom: 40px;
+    }
+
+    /* Sidenotes require horizontal overflow space that doesn't exist on mobile */
+    .sidenote {
+        display: none;
+    }
+
+    /* Entrance overlay: full-width with breathing room */
+    .entrance-content {
+        padding: 32px 20px;
+        max-width: 100%;
+    }
+
+    /* Match entrance text to the rest of the site's mobile font size */
+    .entrance-title,
+    .info-label,
+    .info-content {
+        font-size: inherit;
+    }
+
+    /* Entrance info rows: label above content */
+    .info-row {
+        grid-template-columns: 1fr;
+        gap: 4px;
+        margin-bottom: 16px;
+    }
+
+    /* Menu items: compact, no extra padding — just left space for the triangle */
+    .menu-item {
+        padding: 0 0 0 16px;
+    }
+
+    .menu-item::before {
+        left: 2px;
+    }
+
+    /* Contact section: reduce excessive bottom margin */
+    .contact-section {
+        margin-bottom: 3vh;
+    }
+
+    /* Show About Me in the mobile menu */
+    .mobile-only {
+        display: block;
+    }
+
+    /* Hide About Me from the left panel on mobile */
+    #about-me-left-header,
+    #about-me-paragraph {
+        display: none;
+    }
+
+    /* Recommended reads: collapse to single column, show mobile images, hide desktop column */
+    .rec-grid {
+        display: block;
+    }
+
+    .rec-img-col {
+        display: none;
+    }
+
+    .rec-image-mobile {
+        display: block;
+        width: 100%;
+        margin-top: 16px;
+    }
 }

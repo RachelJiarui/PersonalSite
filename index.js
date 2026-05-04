@@ -223,6 +223,29 @@ function select() {
     .classList.add("not-selected");
 }
 
+function selectAboutMe() {
+  const body = document.getElementById("about-me-view-body");
+  if (!body.innerHTML.trim()) {
+    const src = document.getElementById("about-me-paragraph");
+    body.innerHTML =
+      '<p class="heading" style="margin-top:0">ABOUT ME</p><p>' +
+      (src ? src.innerHTML : "") +
+      "</p>";
+  }
+
+  body.classList.add("selected");
+  body.classList.remove("not-selected");
+
+  document.getElementById("table-view-body").classList.add("not-selected");
+  document.getElementById("table-view-body").classList.remove("selected");
+  document.getElementById("technical-view-body").classList.add("not-selected");
+  document.getElementById("technical-view-body").classList.remove("selected");
+  document.getElementById("ruminations-view-body").classList.add("not-selected");
+  document.getElementById("ruminations-view-body").classList.remove("selected");
+  document.getElementById("recommended-reads-view-body").classList.add("not-selected");
+  document.getElementById("recommended-reads-view-body").classList.remove("selected");
+}
+
 function selectResume() {
   document.getElementById("table-view-body").classList.add("selected");
   document.getElementById("table-view-body").classList.remove("not-selected");
@@ -241,6 +264,9 @@ function selectResume() {
   document
     .getElementById("recommended-reads-view-body")
     .classList.remove("selected");
+
+  document.getElementById("about-me-view-body").classList.add("not-selected");
+  document.getElementById("about-me-view-body").classList.remove("selected");
 }
 
 function selectRuminations() {
@@ -261,6 +287,9 @@ function selectRuminations() {
   document
     .getElementById("recommended-reads-view-body")
     .classList.remove("selected");
+
+  document.getElementById("about-me-view-body").classList.add("not-selected");
+  document.getElementById("about-me-view-body").classList.remove("selected");
 }
 
 function selectTechnical() {
@@ -283,6 +312,9 @@ function selectTechnical() {
   document
     .getElementById("recommended-reads-view-body")
     .classList.remove("selected");
+
+  document.getElementById("about-me-view-body").classList.add("not-selected");
+  document.getElementById("about-me-view-body").classList.remove("selected");
 }
 
 function selectRecommendedReads() {
@@ -303,6 +335,9 @@ function selectRecommendedReads() {
   document
     .getElementById("recommended-reads-view-body")
     .classList.add("selected");
+
+  document.getElementById("about-me-view-body").classList.add("not-selected");
+  document.getElementById("about-me-view-body").classList.remove("selected");
 }
 
 document.querySelectorAll(".menu-item").forEach((item) => {

@@ -57,7 +57,7 @@
                 <div class="header">
                     <div class="container">
                         <div>CURRENT STATUS</div>
-                        <div>ABOUT ME</div>
+                        <div id="about-me-left-header">ABOUT ME</div>
                     </div>
                 </div>
                 <hr />
@@ -91,7 +91,7 @@
                         hiking, cycling and snowboarding.
                     </p>
                     <!-- Body 2 -->
-                    <p>
+                    <p id="about-me-paragraph">
                         My early education was founded on the principle that to
                         grow the logical mind, you grow it through math. I honed
                         my skills in competitive math, and developed a love for
@@ -172,6 +172,13 @@
                         <div>Phone Number: (617)-438-9641</div>
                         <div class="menu">
                             <div
+                                onClick="selectAboutMe()"
+                                class="clickable menu-item mobile-only"
+                                id="about-me"
+                            >
+                                About Me
+                            </div>
+                            <div
                                 onClick="selectTechnical()"
                                 class="clickable menu-item"
                                 id="media"
@@ -206,6 +213,8 @@
 
                 <!-- Body of the second column -->
                 <div class="body">
+                    <!-- ABOUT ME (mobile menu section) -->
+                    <div id="about-me-view-body" class="not-selected"></div>
                     <!-- MY CV -->
                     <div id="table-view-body" class="not-selected">
                         <p class="heading">PROFESSIONAL EXPERIENCE</p>
@@ -836,162 +845,171 @@
 
                     <!-- MY RECOMMENDED READS -->
                     <div id="recommended-reads-view-body" class="selected">
-                        <div
-                            style="
-                                display: grid;
-                                grid-template-columns: 1fr 1fr;
-                                gap: 20px;
-                                align-items: start;
-                            "
-                        >
-                            <!-- Left: all text sections -->
-                            <div>
-                                <p class="heading">BOOKS</p>
-                                <ul class="desc">
-                                    <li>The Righteous Mind</li>
-                                    <li>Careless People</li>
-                                    <li>Superintelligence</li>
-                                    <li>The Glass Castle</li>
-                                    <li>Dune Books 1-5</li>
-                                    <li>Ender's Game</li>
-                                    <li>The Island of Sea Women</li>
-                                    <li>Brave New World</li>
-                                    <li>No Longer Human</li>
-                                    <li>Song of Solomon</li>
-                                    <li>
-                                        The Beautiful Things That Heaven Bears
-                                    </li>
-                                    <li>The Epic of Gilgamesh</li>
-                                    <li>Tender is the Flesh</li>
-                                    <li>Lapvona</li>
-                                    <li>Logicomix</li>
-                                    <li>
-                                        Drive Your Plow Over the Bones of the
-                                        Dead
-                                    </li>
-                                    <li>Stand Out of Our Light</li>
-                                    <li>Speculative Everything</li>
-                                    <li>So Human an Animal</li>
-                                    <li>Claymore</li>
-                                    <li>Nano List</li>
-                                    <li>Blame!</li>
-                                    <li>Blood on the Tracks</li>
-                                    <li>Land of the Lustrous</li>
-                                    <li>Oyasumi Punpun</li>
-                                    <li>The Flowers of Evil</li>
-                                    <li>Lessa</li>
-                                    <li>Neon Genesis Evangelion</li>
-                                </ul>
-                                <p class="heading">FILMS</p>
-                                <ul class="desc">
-                                    <li>Amrum</li>
-                                    <li>Dune</li>
-                                    <li>The Wonderful Story of Henry Sugar</li>
-                                    <li>Handmaiden</li>
-                                    <li>Portrait of a Lady on Fire</li>
-                                    <li>Whiplash</li>
-                                    <li>Nightcrawler</li>
-                                    <li>Carol</li>
-                                    <li>Blade Runner</li>
-                                    <li>Taste of Cherry</li>
-                                    <li>Akira</li>
-                                    <li>
-                                        Eternal Sunshine of the Spotless Mind
-                                    </li>
-                                    <li>Hedda</li>
-                                </ul>
-                                <p class="heading">JOURNALISM & POETRY</p>
-                                <ul class="desc">
-                                    <li>
-                                        The Reluctant Prophet of Effective
-                                        Altruism
-                                    </li>
-                                    <li>
-                                        Kolmogorov Complexity and Our Search for
-                                        Meaning
-                                    </li>
-                                    <li>Why Smart People Have Bad Ideas</li>
-                                    <li>The Laws of Cyberspace</li>
-                                    <li>Hymn to Intellectual Beauty</li>
-                                </ul>
-                                <p class="heading">PHILOSOPHY & POLITICS</p>
-                                <ul class="desc">
-                                    <li>Meditations by Rene Descartes</li>
-                                    <li>
-                                        Doubts about the Understanding Pt. 4 by
-                                        David Hume
-                                    </li>
-                                    <li>
-                                        What is Enlightenment? by Immanuel Kant
-                                    </li>
-                                    <li>
-                                        Famine, Affluence, and Morality by Peter
-                                        Singer
-                                    </li>
-                                    <li>
-                                        Transition from Popular Moral Philosophy
-                                        to Metaphysics of Morals by Immanuel
-                                        Kant
-                                    </li>
-                                    <li>Plato's Republic Book IV</li>
-                                    <li>
-                                        Do Artifacts Have Politics? by Langdon
-                                        Winner
-                                    </li>
-                                    <li>
-                                        The Laws of Cyberspace by Lawrence
-                                        Lessig
-                                    </li>
-                                    <li>
-                                        Digital Borders by Jack Goldsmith and
-                                        Tim Wu
-                                    </li>
-                                    <li>
-                                        Free Speech is a Triangle by Jack Balkin
-                                    </li>
-                                    <li>
-                                        A Taxonomy of Privacy by Daniel Solove
-                                    </li>
-                                    <li>
-                                        Big Other: Surveillance Capitalism and
-                                        the Prospects of an Information
-                                        Civilization by Shoshana Zuboff
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- Right: bw images stacked vertically -->
-                            <div
-                                style="
-                                    display: flex;
-                                    flex-direction: column;
-                                    gap: 20px;
-                                "
-                            >
+                        <div class="rec-grid">
+                            <!-- Text column: each section has a mobile-only image below it -->
+                            <div class="rec-text-col">
+                                <div class="rec-text-section">
+                                    <p class="heading">BOOKS</p>
+                                    <ul class="desc">
+                                        <li>The Righteous Mind</li>
+                                        <li>Careless People</li>
+                                        <li>Superintelligence</li>
+                                        <li>The Glass Castle</li>
+                                        <li>Dune Books 1-5</li>
+                                        <li>Ender's Game</li>
+                                        <li>The Island of Sea Women</li>
+                                        <li>Brave New World</li>
+                                        <li>No Longer Human</li>
+                                        <li>Song of Solomon</li>
+                                        <li>
+                                            The Beautiful Things That Heaven
+                                            Bears
+                                        </li>
+                                        <li>The Epic of Gilgamesh</li>
+                                        <li>Tender is the Flesh</li>
+                                        <li>Lapvona</li>
+                                        <li>Logicomix</li>
+                                        <li>
+                                            Drive Your Plow Over the Bones of
+                                            the Dead
+                                        </li>
+                                        <li>Stand Out of Our Light</li>
+                                        <li>Speculative Everything</li>
+                                        <li>So Human an Animal</li>
+                                        <li>Claymore</li>
+                                        <li>Nano List</li>
+                                        <li>Blame!</li>
+                                        <li>Blood on the Tracks</li>
+                                        <li>Land of the Lustrous</li>
+                                        <li>Oyasumi Punpun</li>
+                                        <li>The Flowers of Evil</li>
+                                        <li>Lessa</li>
+                                        <li>Neon Genesis Evangelion</li>
+                                    </ul>
+                                    <img
+                                        class="rec-image-mobile"
+                                        src="bw/1.jpeg"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="rec-text-section">
+                                    <p class="heading">FILMS</p>
+                                    <ul class="desc">
+                                        <li>Amrum</li>
+                                        <li>Dune</li>
+                                        <li>
+                                            The Wonderful Story of Henry Sugar
+                                        </li>
+                                        <li>Handmaiden</li>
+                                        <li>Portrait of a Lady on Fire</li>
+                                        <li>Whiplash</li>
+                                        <li>Nightcrawler</li>
+                                        <li>Carol</li>
+                                        <li>Blade Runner</li>
+                                        <li>Taste of Cherry</li>
+                                        <li>Akira</li>
+                                        <li>
+                                            Eternal Sunshine of the Spotless
+                                            Mind
+                                        </li>
+                                        <li>Hedda</li>
+                                    </ul>
+                                    <img
+                                        class="rec-image-mobile"
+                                        src="bw/2.jpeg"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="rec-text-section">
+                                    <p class="heading">JOURNALISM & POETRY</p>
+                                    <ul class="desc">
+                                        <li>
+                                            The Reluctant Prophet of Effective
+                                            Altruism
+                                        </li>
+                                        <li>
+                                            Kolmogorov Complexity and Our Search
+                                            for Meaning
+                                        </li>
+                                        <li>Why Smart People Have Bad Ideas</li>
+                                        <li>The Laws of Cyberspace</li>
+                                        <li>Hymn to Intellectual Beauty</li>
+                                    </ul>
+                                    <img
+                                        class="rec-image-mobile"
+                                        src="bw/3.jpeg"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="rec-text-section">
+                                    <p class="heading">PHILOSOPHY & POLITICS</p>
+                                    <ul class="desc">
+                                        <li>Meditations by Rene Descartes</li>
+                                        <li>
+                                            Doubts about the Understanding Pt. 4
+                                            by David Hume
+                                        </li>
+                                        <li>
+                                            What is Enlightenment? by Immanuel
+                                            Kant
+                                        </li>
+                                        <li>
+                                            Famine, Affluence, and Morality by
+                                            Peter Singer
+                                        </li>
+                                        <li>
+                                            Transition from Popular Moral
+                                            Philosophy to Metaphysics of Morals
+                                            by Immanuel Kant
+                                        </li>
+                                        <li>Plato's Republic Book IV</li>
+                                        <li>
+                                            Do Artifacts Have Politics? by
+                                            Langdon Winner
+                                        </li>
+                                        <li>
+                                            The Laws of Cyberspace by Lawrence
+                                            Lessig
+                                        </li>
+                                        <li>
+                                            Digital Borders by Jack Goldsmith
+                                            and Tim Wu
+                                        </li>
+                                        <li>
+                                            Free Speech is a Triangle by Jack
+                                            Balkin
+                                        </li>
+                                        <li>
+                                            A Taxonomy of Privacy by Daniel
+                                            Solove
+                                        </li>
+                                        <li>
+                                            Big Other: Surveillance Capitalism
+                                            and the Prospects of an Information
+                                            Civilization by Shoshana Zuboff
+                                        </li>
+                                    </ul>
+                                    <img
+                                        class="rec-image-mobile"
+                                        src="bw/4.jpeg"
+                                        alt=""
+                                    />
+                                </div>
+                                <!-- 5th image has no paired text section -->
                                 <img
-                                    src="bw/1.jpeg"
-                                    alt=""
-                                    style="width: 100%"
-                                />
-                                <img
-                                    src="bw/2.jpeg"
-                                    alt=""
-                                    style="width: 100%"
-                                />
-                                <img
-                                    src="bw/3.jpeg"
-                                    alt=""
-                                    style="width: 100%"
-                                />
-                                <img
-                                    src="bw/4.jpeg"
-                                    alt=""
-                                    style="width: 100%"
-                                />
-                                <img
+                                    class="rec-image-mobile"
                                     src="bw/5.jpeg"
                                     alt=""
-                                    style="width: 100%"
                                 />
+                            </div>
+
+                            <!-- Image column: desktop only, evenly spaced -->
+                            <div class="rec-img-col">
+                                <img src="bw/1.jpeg" alt="" />
+                                <img src="bw/2.jpeg" alt="" />
+                                <img src="bw/3.jpeg" alt="" />
+                                <img src="bw/4.jpeg" alt="" />
+                                <img src="bw/5.jpeg" alt="" />
                             </div>
                         </div>
                     </div>
