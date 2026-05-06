@@ -201,11 +201,94 @@
                                 My Ruminations
                             </div>
                             <div
-                                onClick="selectRecommendedReads()"
+                                onClick="selectPhotography()"
                                 class="clickable menu-item selected"
+                                id="photography"
+                            >
+                                My Photography &amp; Art
+                            </div>
+                            <div
+                                onClick="selectRecommendedReads()"
+                                class="clickable menu-item"
                                 id="recommended-reads"
                             >
-                                My Recommended Content
+                                My Top Five
+                            </div>
+                            <div
+                                id="top-five-toc"
+                                class="top-five-toc not-selected"
+                            >
+                                <div
+                                    class="toc-item"
+                                    onclick="
+                                        selectTopFiveCategory(
+                                            'rec-non-fiction-books',
+                                            this,
+                                        )
+                                    "
+                                >
+                                    Non-Fiction Books
+                                </div>
+                                <div
+                                    class="toc-item"
+                                    onclick="
+                                        selectTopFiveCategory(
+                                            'rec-fiction-books',
+                                            this,
+                                        )
+                                    "
+                                >
+                                    Fiction Books
+                                </div>
+                                <div
+                                    class="toc-item"
+                                    onclick="
+                                        selectTopFiveCategory('rec-films', this)
+                                    "
+                                >
+                                    Films
+                                </div>
+                                <div
+                                    class="toc-item"
+                                    onclick="
+                                        selectTopFiveCategory(
+                                            'rec-essays',
+                                            this,
+                                        )
+                                    "
+                                >
+                                    Essays
+                                </div>
+                                <div
+                                    class="toc-item"
+                                    onclick="
+                                        selectTopFiveCategory(
+                                            'rec-restaurants',
+                                            this,
+                                        )
+                                    "
+                                >
+                                    Restaurants
+                                </div>
+                                <div
+                                    class="toc-item"
+                                    onclick="
+                                        selectTopFiveCategory('rec-music', this)
+                                    "
+                                >
+                                    Music
+                                </div>
+                                <!--<div
+                                    class="toc-item"
+                                    onclick="
+                                        selectTopFiveCategory(
+                                            'rec-beliefs',
+                                            this,
+                                        )
+                                    "
+                                >
+                                    Beliefs
+                                </div>-->
                             </div>
                         </div>
                     </div>
@@ -220,6 +303,19 @@
                         <p class="heading">PROFESSIONAL EXPERIENCE</p>
                         <div class="container">
                             <!-- Item 1 -->
+                            <div class="title">
+                                <div class="date">
+                                    <div>01/01/25</div>
+                                    <div>Present</div>
+                                </div>
+                                <p class="title-role">ChatGPT Lab Member</p>
+                            </div>
+                            <p class="desc">
+                                Alpha tester for ChatGPT Browser, ChatGPT Study
+                                Mode, Imagegen 2.0, ChatGPT Instant
+                                <!-- Item 1 -->
+                            </p>
+
                             <div class="title">
                                 <div class="date">
                                     <div>08/19/25</div>
@@ -843,175 +939,1192 @@
                         </div>
                     </div>
 
-                    <!-- MY RECOMMENDED READS -->
-                    <div id="recommended-reads-view-body" class="selected">
-                        <div class="rec-grid">
-                            <!-- Text column: each section has a mobile-only image below it -->
-                            <div class="rec-text-col">
-                                <div class="rec-text-section">
-                                    <p class="heading">BOOKS</p>
-                                    <ul class="desc">
-                                        <li>The Righteous Mind</li>
-                                        <li>Careless People</li>
-                                        <li>Superintelligence</li>
-                                        <li>The Glass Castle</li>
-                                        <li>Dune Books 1-5</li>
-                                        <li>Ender's Game</li>
-                                        <li>The Island of Sea Women</li>
-                                        <li>Brave New World</li>
-                                        <li>No Longer Human</li>
-                                        <li>Song of Solomon</li>
-                                        <li>
-                                            The Beautiful Things That Heaven
-                                            Bears
-                                        </li>
-                                        <li>The Epic of Gilgamesh</li>
-                                        <li>Tender is the Flesh</li>
-                                        <li>Lapvona</li>
-                                        <li>Logicomix</li>
-                                        <li>
-                                            Drive Your Plow Over the Bones of
-                                            the Dead
-                                        </li>
-                                        <li>Stand Out of Our Light</li>
-                                        <li>Speculative Everything</li>
-                                        <li>So Human an Animal</li>
-                                        <li>Claymore</li>
-                                        <li>Nano List</li>
-                                        <li>Blame!</li>
-                                        <li>Blood on the Tracks</li>
-                                        <li>Land of the Lustrous</li>
-                                        <li>Oyasumi Punpun</li>
-                                        <li>The Flowers of Evil</li>
-                                        <li>Lessa</li>
-                                        <li>Neon Genesis Evangelion</li>
-                                    </ul>
-                                    <img
-                                        class="rec-image-mobile"
-                                        src="bw/1.jpeg"
-                                        alt=""
-                                    />
-                                </div>
-                                <div class="rec-text-section">
-                                    <p class="heading">FILMS</p>
-                                    <ul class="desc">
-                                        <li>Amrum</li>
-                                        <li>Dune</li>
-                                        <li>
-                                            The Wonderful Story of Henry Sugar
-                                        </li>
-                                        <li>Handmaiden</li>
-                                        <li>Portrait of a Lady on Fire</li>
-                                        <li>Whiplash</li>
-                                        <li>Nightcrawler</li>
-                                        <li>Carol</li>
-                                        <li>Blade Runner</li>
-                                        <li>Taste of Cherry</li>
-                                        <li>Akira</li>
-                                        <li>
-                                            Eternal Sunshine of the Spotless
-                                            Mind
-                                        </li>
-                                        <li>Hedda</li>
-                                    </ul>
-                                    <img
-                                        class="rec-image-mobile"
-                                        src="bw/2.jpeg"
-                                        alt=""
-                                    />
-                                </div>
-                                <div class="rec-text-section">
-                                    <p class="heading">JOURNALISM & POETRY</p>
-                                    <ul class="desc">
-                                        <li>
-                                            The Reluctant Prophet of Effective
-                                            Altruism
-                                        </li>
-                                        <li>
-                                            Kolmogorov Complexity and Our Search
-                                            for Meaning
-                                        </li>
-                                        <li>Why Smart People Have Bad Ideas</li>
-                                        <li>The Laws of Cyberspace</li>
-                                        <li>Hymn to Intellectual Beauty</li>
-                                    </ul>
-                                    <img
-                                        class="rec-image-mobile"
-                                        src="bw/3.jpeg"
-                                        alt=""
-                                    />
-                                </div>
-                                <div class="rec-text-section">
-                                    <p class="heading">PHILOSOPHY & POLITICS</p>
-                                    <ul class="desc">
-                                        <li>Meditations by Rene Descartes</li>
-                                        <li>
-                                            Doubts about the Understanding Pt. 4
-                                            by David Hume
-                                        </li>
-                                        <li>
-                                            What is Enlightenment? by Immanuel
-                                            Kant
-                                        </li>
-                                        <li>
-                                            Famine, Affluence, and Morality by
-                                            Peter Singer
-                                        </li>
-                                        <li>
-                                            Transition from Popular Moral
-                                            Philosophy to Metaphysics of Morals
-                                            by Immanuel Kant
-                                        </li>
-                                        <li>Plato's Republic Book IV</li>
-                                        <li>
-                                            Do Artifacts Have Politics? by
-                                            Langdon Winner
-                                        </li>
-                                        <li>
-                                            The Laws of Cyberspace by Lawrence
-                                            Lessig
-                                        </li>
-                                        <li>
-                                            Digital Borders by Jack Goldsmith
-                                            and Tim Wu
-                                        </li>
-                                        <li>
-                                            Free Speech is a Triangle by Jack
-                                            Balkin
-                                        </li>
-                                        <li>
-                                            A Taxonomy of Privacy by Daniel
-                                            Solove
-                                        </li>
-                                        <li>
-                                            Big Other: Surveillance Capitalism
-                                            and the Prospects of an Information
-                                            Civilization by Shoshana Zuboff
-                                        </li>
-                                    </ul>
-                                    <img
-                                        class="rec-image-mobile"
-                                        src="bw/4.jpeg"
-                                        alt=""
-                                    />
-                                </div>
-                                <!-- 5th image has no paired text section -->
-                                <img
-                                    class="rec-image-mobile"
-                                    src="bw/5.jpeg"
-                                    alt=""
-                                />
-                            </div>
+                    <!-- MY PHOTOGRAPHY & ART -->
+                    <div id="photography-view-body" class="selected">
+                        <div class="photo-grid">
+                            <img src="bw/1.jpeg" alt="" />
+                            <img src="bw/2.jpeg" alt="" />
+                            <img src="bw/3.jpeg" alt="" />
+                            <img src="bw/4.jpeg" alt="" />
+                            <img src="bw/5.jpeg" alt="" />
+                            <img src="bw/6.jpeg" alt="" />
+                            <img src="bw/7.jpeg" alt="" />
+                            <img src="bw/8.jpeg" alt="" />
+                            <img src="bw/9.jpeg" alt="" />
+                        </div>
+                    </div>
 
-                            <!-- Image column: desktop only, evenly spaced -->
-                            <div class="rec-img-col">
-                                <img src="bw/1.jpeg" alt="" />
-                                <img src="bw/2.jpeg" alt="" />
-                                <img src="bw/3.jpeg" alt="" />
-                                <img src="bw/4.jpeg" alt="" />
-                                <img src="bw/5.jpeg" alt="" />
+                    <!-- MY RECOMMENDED READS -->
+                    <div id="recommended-reads-view-body" class="not-selected">
+                        <div
+                            class="rec-section not-selected"
+                            id="rec-non-fiction-books"
+                        >
+                            <p class="heading" style="margin-top: 0">
+                                NON-FICTION BOOKS
+                            </p>
+                            <div class="rec-item">
+                                <img
+                                    src="content/righteous.jpg"
+                                    alt="The Righteous Mind"
+                                    class="rec-item-img"
+                                />
+                                <div class="rec-item-content">
+                                    <p class="rec-item-title">
+                                        The Righteous Mind
+                                    </p>
+                                    <p class="rec-item-attr">
+                                        by Jonathan Haidt (along with A Treatise
+                                        of Human Nature by Hume)
+                                    </p>
+                                    <div class="rec-item-desc">
+                                        <p>
+                                            Haidt writes about the psychology of
+                                            our moral standards and why people
+                                            can hold vastly different opinions.
+                                            Through his examples, it becomes
+                                            strikingly compelling to believe
+                                            that our moral responses—which
+                                            crystallize into political
+                                            beliefs—are not rooted in pure
+                                            reason but rather are largely
+                                            dictated by intuitions, evolutionary
+                                            foundations, and culture-guided.
+                                        </p>
+                                        <p>
+                                            This book profoundly humbled me. As
+                                            someone who was quick to fire to
+                                            defend moral beliefs, this book
+                                            changed the way I viewed reason’s
+                                            role in bridging divides. Only by
+                                            learning how to abandon
+                                            self-righteousness while still
+                                            remaining committed to our
+                                            convictions will we be able to
+                                            understand others.
+                                        </p>
+                                        <p>
+                                            I would recommend this book to
+                                            anyone who wants to become more
+                                            politically active. The book doesn't
+                                            provide any political guidance, but
+                                            it does provide necessary context to
+                                            begin understanding people who hold
+                                            seemingly foreign ideas to you and
+                                            prevent you from further polarizing
+                                            the already toxic political
+                                            landscape in the U.S.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rec-item">
+                                <img
+                                    src="content/kant.jpg"
+                                    alt="Groundwork of the Metaphysic of Morals"
+                                    class="rec-item-img"
+                                />
+                                <div class="rec-item-content">
+                                    <p class="rec-item-title">
+                                        Groundwork of the Metaphysic of Morals
+                                    </p>
+                                    <p class="rec-item-attr">
+                                        by Immanuel Kant
+                                    </p>
+                                    <div class="rec-item-desc">
+                                        <p>
+                                            Interestingly, I learned and studied
+                                            Kant after reading Haidt and Hume.
+                                            Kant's work was extraordinarily
+                                            "programmatic," in the sense that
+                                            his process is deeply logical and
+                                            makes more sense the more you mull
+                                            over it. Although I often found
+                                            myself hating reading his work, I
+                                            remain in awe towards his
+                                            contributions to the foundations of
+                                            morality. I'm particularly convinced
+                                            by his definition of autonomy and
+                                            interested in Kant's Formula of
+                                            Humanity. When understanding harms
+                                            against autonomy in tech, I
+                                            reference Kant's groundwork.
+                                        </p>
+                                        <p>
+                                            Nearly all modern, western, moral or
+                                            political philosophers are in some
+                                            conversation with Kant's Groundwork.
+                                            As a result, I would recommend
+                                            anyone interested in moral or
+                                            political philosophy to read Kant.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rec-item">
+                                <img
+                                    src="content/standoutofourlight.jpg"
+                                    alt="Stand Out of Your Light"
+                                    class="rec-item-img"
+                                />
+                                <div class="rec-item-content">
+                                    <p class="rec-item-title">
+                                        Stand Out of Your Light
+                                    </p>
+                                    <p class="rec-item-attr">
+                                        by James Williams
+                                    </p>
+                                    <div class="rec-item-desc">
+                                        <p>
+                                            After reading Shuboff's viral paper
+                                            on Big Tech survelliance economy, I
+                                            was fascinated by the relationship
+                                            between attention and autonomy. This
+                                            book offered a fascinating of such
+                                            account.
+                                        </p>
+                                        <p>
+                                            One of James' most interesting
+                                            claims is the importance of leisure
+                                            free from external manipulation in
+                                            maintaining our autonomy. In a world
+                                            where free time for reflection is
+                                            steadily declining, this book pushed
+                                            me to intentionally carve out
+                                            moments for “purposeless”
+                                            mind-wandering. Whether through
+                                            meditation or simply resisting the
+                                            urge to fill every idle second with
+                                            stimulation, like checking my phone
+                                            while brushing my teeth.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rec-item">
+                                <img
+                                    src="content/speculative.jpg"
+                                    alt="Speculative Everything"
+                                    class="rec-item-img"
+                                />
+                                <div class="rec-item-content">
+                                    <p class="rec-item-title">
+                                        Speculative Everything: Design, Fiction,
+                                        and Social Dreaming
+                                    </p>
+                                    <p class="rec-item-attr">
+                                        by Anthony Dunne
+                                    </p>
+                                    <div class="rec-item-desc">
+                                        <p>
+                                            I read this book when creating a
+                                            project called Archailects which is
+                                            a speculative newspaper set in the
+                                            future that reports on tech. I was
+                                            trying to be more coherent in
+                                            explaining the purpose of such a
+                                            creative, otherwordly project; It
+                                            being that speculative design is one
+                                            that shapes our understanding of
+                                            what the possibilities our future
+                                            could hold, and what our ideals
+                                            should be.
+                                        </p>
+                                        <p>
+                                            This book is a requirement for all
+                                            creatives. It answers the question
+                                            to why we create things that may not
+                                            have immediate utility.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rec-item">
+                                <img
+                                    src="content/sohumanananimal.jpg"
+                                    alt="So Human an Animal"
+                                    class="rec-item-img"
+                                />
+                                <div class="rec-item-content">
+                                    <p class="rec-item-title">
+                                        So Human an Animal
+                                    </p>
+                                    <p class="rec-item-attr">by Rene Dubos</p>
+                                    <div class="rec-item-desc">
+                                        <p>
+                                            Pulitzer Prize for General
+                                            Nonfiction in 1969. Dubos
+                                            demonstrated the importance of
+                                            environments to our humanity, and
+                                            the attention we must put towards
+                                            our day to day interactions to
+                                            become good humans. This idea
+                                            sparked the lifelong goal of
+                                            designing better technology for
+                                            humans to intuitively do good
+                                            things. Another book, a more modern
+                                            one, that pairs nicely with this is
+                                            Nudge by Cass Sunstein.
+                                        </p>
+                                        <p>
+                                            I found the anthropological account,
+                                            evolutional theory, and
+                                            psychological experiments very
+                                            entertaining. It made me feel less
+                                            like we are profoundly intelligent
+                                            beings, but more like animals that
+                                            more often than not merely
+                                            responding to our environment.
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+
+                        <div
+                            class="rec-section not-selected"
+                            id="rec-fiction-books"
+                        >
+                            <p class="heading">FICTION BOOKS</p>
+                            <div class="rec-item">
+                                <img
+                                    src="content/endersgame.jpg"
+                                    alt="Ender's Game"
+                                    class="rec-item-img"
+                                />
+                                <div class="rec-item-content">
+                                    <p class="rec-item-title">Ender's Game</p>
+                                    <p class="rec-item-attr">
+                                        by Orson Scott Card
+                                    </p>
+                                    <div class="rec-item-desc">
+                                        <p>
+                                            This characters of the book are
+                                            incredibly brilliant, and existing
+                                            in their minds and their odyssey was
+                                            extraordinary thrilling. This book
+                                            is less about the aliens that
+                                            humanity is about to confront, but
+                                            about the human politics and the
+                                            ethics of going to war with an
+                                            intelligent species. We unravel this
+                                            philosophy with our main character,
+                                            Ender, as he navigates a unique form
+                                            of military space school. Ender
+                                            seems to fill the classic Chosen One
+                                            trope, but his experience is violent
+                                            and psychological, one that makes it
+                                            unclear if he is the Chosen One to
+                                            do something morally good or bad.
+                                        </p>
+                                        <p></p>
+                                        <p>
+                                            It cannot be left unsaid that Orson
+                                            Scott Card, unfortunately, is
+                                            someone who holds harmful opinions
+                                            that I do not agree with.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rec-item">
+                                <img
+                                    src="content/seawomen.jpg"
+                                    alt="The Island of Seawomen"
+                                    class="rec-item-img"
+                                />
+                                <div class="rec-item-content">
+                                    <p class="rec-item-title">
+                                        The Island of Seawomen
+                                    </p>
+                                    <p class="rec-item-attr">by Lisa See</p>
+                                    <div class="rec-item-desc">
+                                        <p>
+                                            A delicate story about female divers
+                                            (haenyo) of Jeju Island as they face
+                                            Japanese colonization and cultural
+                                            upheaval spanning decades. It
+                                            explores a deep friendship in the
+                                            face of personal and political
+                                            trauma.
+                                        </p>
+                                        <p>
+                                            The traditions of the sea women of
+                                            Jeju Island were entirely unique to
+                                            anything I've ever been exposed to.
+                                            Every character had an arc that I
+                                            was attached to. It was one of the
+                                            first and only books I've ever cried
+                                            to. I felt the grief the characters
+                                            felt, teased out masterfully by Lisa
+                                            See's craft.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rec-item">
+                                <img
+                                    src="content/dune.jpg"
+                                    alt="God Emperor of Dune"
+                                    class="rec-item-img"
+                                />
+                                <div class="rec-item-content">
+                                    <p class="rec-item-title">
+                                        God Emperor of Dune
+                                    </p>
+                                    <p class="rec-item-attr">
+                                        by Frank Herbert
+                                    </p>
+                                    <div class="rec-item-desc">
+                                        <p>
+                                            The culmination of Paul's prophecy,
+                                            planted in book one, comes to it's
+                                            peak in the God Emperor of Dune.
+                                            It's an epic story of a great
+                                            metamorphosis in all regards;
+                                            environmental, political, and
+                                            personal.
+                                        </p>
+                                        <p>
+                                            I found it to be fascinating to be
+                                            placed in the mind of an
+                                            all-knowing, all-powerful creature.
+                                            Every chapter begins with an excerpt
+                                            from a fictional scripture or
+                                            analysis that makes you feel as if
+                                            the Dune universe had existed for
+                                            thousands of years in real life with
+                                            real historians, religious
+                                            believers, technologists, etc.
+                                            Herbert is a genius creative, and
+                                            his ingenuity is on full display in
+                                            this fourth book of the series.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rec-item">
+                                <img
+                                    src="content/landoflustrous.jpg"
+                                    alt="Land of the Lustrous"
+                                    class="rec-item-img"
+                                />
+                                <div class="rec-item-content">
+                                    <p class="rec-item-title">
+                                        Land of the Lustrous
+                                    </p>
+                                    <p class="rec-item-attr">
+                                        by Haruko Ichikawa
+                                    </p>
+                                    <div class="rec-item-desc">
+                                        <p>
+                                            This is a Japanese manga about
+                                            immortal humanoid-stone lifeform led
+                                            by a father-figure, God-like being
+                                            who seems to have a strange
+                                            relationship with their mortal
+                                            enemy, a celestial humanoid
+                                            lifeform. One of the few things that
+                                            made this story stand out from the
+                                            getgo was the uniqueness of the
+                                            enemy.
+                                        </p>
+                                        <p>
+                                            At first glance, it seems completely
+                                            otherwordly. However, as the story
+                                            reveals the origins of these
+                                            creatures, you'll see that this
+                                            story is deeply grounded in humanity
+                                            as we know it.
+                                        </p>
+                                        <p>
+                                            It follows themes of identity (Ship
+                                            of Theseus) and the pain of
+                                            existence through the disfiguration
+                                            of our main character, Phos. The
+                                            inclusion of Buddhist philosophy
+                                            regarding attachment, suffering, and
+                                            enlightenment along with the
+                                            unusual, remarkable universe made
+                                            this story unforgettable.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rec-item">
+                                <img
+                                    src="content/beautifulthings.jpg"
+                                    alt="The Beautiful Things That Heaven Bears"
+                                    class="rec-item-img"
+                                />
+                                <div class="rec-item-content">
+                                    <p class="rec-item-title">
+                                        The Beautiful Things That Heaven Bears
+                                    </p>
+                                    <p class="rec-item-attr">
+                                        by Dinaw Mengestu
+                                    </p>
+                                    <div class="rec-item-desc">
+                                        <p>
+                                            I spent nearly all of high school
+                                            not interested in reading, but this
+                                            book got me out of my slump so I
+                                            have to give credit to where
+                                            credit's due.
+                                        </p>
+                                        <p>
+                                            This story follows an Ethiopian
+                                            immigrant in Washington D.C.
+                                            struggling with loneliness, adapting
+                                            to a new culture, and feeling a deep
+                                            sense of loss of identity. It's not
+                                            a flashy story; it's slow paced, and
+                                            quiet. It examines small
+                                            interactions between his neighbors
+                                            and flashbacks to his life in
+                                            Ethiopia. Through this, Mengestu is
+                                            able to create a complex feeling of
+                                            bittersweetness, of a tragedy that
+                                            is not grand.
+                                        </p>
+                                        <p>
+                                            The writing is raw and real. I
+                                            reflected a lot about the life my
+                                            parents must've faced when they
+                                            immigrated to the U.S. Mengestu, an
+                                            immigrant himself, has insight and
+                                            the craft to be able to explain the
+                                            nuances beautifully.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="rec-section not-selected" id="rec-films">
+                            <p class="heading">FILMS</p>
+                            <div class="rec-item">
+                                <img
+                                    src="content/amrum.jpg"
+                                    alt="Amrum"
+                                    class="rec-item-img"
+                                />
+                                <div class="rec-item-content">
+                                    <p class="rec-item-title">Amrum</p>
+                                    <p class="rec-item-attr">by Faith Akin</p>
+                                    <div class="rec-item-desc">
+                                        <p>
+                                            This movie takes place in Amrum
+                                            Island, Germany in 1945 when World
+                                            War 2 ends. It follows a boy who is
+                                            trying to calm his tormented mother
+                                            who is anguished at the fall of
+                                            Hitler, as their father seemed to be
+                                            a high ranking Nazi officer or
+                                            researcher in Nazi ideology.
+                                        </p>
+                                        <p>
+                                            The setting of Amrum Island is
+                                            idyllic, occupied by many people who
+                                            don't support the war. There are
+                                            many stunning shots of the nature of
+                                            the place and short explorations of
+                                            life on this island. The slow-paced
+                                            beauty is one of why I loved the
+                                            movie so much.
+                                        </p>
+                                        <p>
+                                            I also loved this movie because it
+                                            depicted a side of how confusing
+                                            political transition can be. It is
+                                            ultimately a coming of age story of
+                                            a boy born in between political
+                                            strife represented by his mother
+                                            versus his community. I love a good
+                                            coming of age story with beautiful
+                                            cinematography that tackles nuanced
+                                            themes like tackling indoctrination
+                                            and moral awakening.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rec-item">
+                                <img
+                                    src="content/handmaiden.png"
+                                    alt="The Handmaiden"
+                                    class="rec-item-img"
+                                />
+                                <div class="rec-item-content">
+                                    <p class="rec-item-title">The Handmaiden</p>
+                                    <p class="rec-item-attr">
+                                        by Park Chan-wook
+                                    </p>
+                                    <div class="rec-item-desc">
+                                        <p>
+                                            This movie was the best kind of
+                                            rollercoaster from top to end. It
+                                            follows con-artists trying to
+                                            swindle a woman out of her
+                                            inheritence through seduction. It
+                                            had twists I never expected.
+                                        </p>
+                                        <p>
+                                            The pacing in the form of 3 parts
+                                            had me lapping up every second I
+                                            could get from this movie. It's
+                                            sensual, it's psychological and
+                                            funny. If not for the electric plot,
+                                            this is also a cinematographic
+                                            masterpiece--every shot is
+                                            beautifully lit, with a coherent
+                                            color palette that makes this like a
+                                            Michelin star sensory experience.
+                                        </p>
+                                        <p>
+                                            And of course, the main theme in
+                                            this story is power and control, and
+                                            how the women in the show thwart the
+                                            typical male patriarchy for their
+                                            ultimate ascension. Peak.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rec-item">
+                                <img
+                                    src="content/eternalsunshin.jpg"
+                                    alt="Eternal Sunshine of the Spotless Mind"
+                                    class="rec-item-img"
+                                />
+                                <div class="rec-item-content">
+                                    <p class="rec-item-title">
+                                        Eternal Sunshine of the Spotless Mind
+                                    </p>
+                                    <p class="rec-item-attr">
+                                        by Michel Gondry
+                                    </p>
+                                    <div class="rec-item-desc">
+                                        <p>
+                                            A magical realism, psychological
+                                            romance set in a scifi world where
+                                            anyone could undergo a treatment to
+                                            "forget" any memory, person or
+                                            event. It follows our main
+                                            character, Joel, who is trying to
+                                            forget his failed relationship with
+                                            a woman, Clementine. This movie is
+                                            playful and explores the feelings of
+                                            something so
+                                            universal--heartbreak--in a way that
+                                            is raw and raises the question of
+                                            whether heartbreak is necessary.
+                                        </p>
+                                        <p>
+                                            The choreography of the movie was so
+                                            wacky and unexpected so demonstrate
+                                            the treatment and the relationship.
+                                            Not only that, but it put criticism
+                                            on the immature, "break-up" fantasty
+                                            like "I wish I never met them" or "I
+                                            wish I could just forget it ever
+                                            happened." Instead, it urges us to
+                                            rethink the purpose of heartbreak
+                                            and sitting with the grief of the
+                                            great loss of love. It's a wonderful
+                                            message.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rec-item">
+                                <img
+                                    src="content/bladerunner.jpg"
+                                    alt="Blade Runner"
+                                    class="rec-item-img"
+                                />
+                                <div class="rec-item-content">
+                                    <p class="rec-item-title">Blade Runner</p>
+                                    <p class="rec-item-attr">by Ridley Scott</p>
+                                    <div class="rec-item-desc">
+                                        <p>
+                                            I love Burtalist megastructures in
+                                            juxtaposition with retro-mid-century
+                                            interiors (Blame!, a manga whose
+                                            images are also featured throughout
+                                            my website, and Dune also has this
+                                            vibe) and Blade Runner really became
+                                            my reference board for this
+                                            aesthetic. A perfect example of this
+                                            was the golden-lit interiors of the
+                                            Wallace Corporations headquarters
+                                            with its giant monolithic concrete
+                                            spaces, geometric symmetry and
+                                            characteristic furniture.
+                                        </p>
+                                        <p>
+                                            This movie is one of the
+                                            introductory pieces of artificial
+                                            vs. humanity and one of the main
+                                            character's name is named Rachel, so
+                                            boom, one of my favorites.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rec-item">
+                                <img
+                                    src="content/cherry.jpg"
+                                    alt="Taste of Cherry"
+                                    class="rec-item-img"
+                                />
+                                <div class="rec-item-content">
+                                    <p class="rec-item-title">
+                                        Taste of Cherry
+                                    </p>
+                                    <p class="rec-item-attr">
+                                        by Abbas Kiarostami
+                                    </p>
+                                    <div class="rec-item-desc">
+                                        <p>
+                                            The movie is about an Iranian man
+                                            searching for someone who will bury
+                                            him after he commits suicide. It
+                                            follows him in a car, often in long
+                                            stretches of uncut filming, meeting
+                                            all sorts of people who have
+                                            different responses to his request.
+                                        </p>
+                                        <p>
+                                            The experience was rather zen and
+                                            detatched. We learn nothing about
+                                            the man's motives for suicide. I
+                                            found this to be very raw and real.
+                                            The movie is not preaching against
+                                            suicide, but it captures the
+                                            audience with the little tendrils of
+                                            human connection that might convince
+                                            someone to delay death. The movie is
+                                            undecided enough for people to make
+                                            drastically different conclusions,
+                                            though. It's what makes it
+                                            intellectually interesting.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="rec-section not-selected" id="rec-essays">
+                            <p class="heading">ESSAYS</p>
+                            <div class="rec-item">
+                                <img
+                                    src="content/langdon.png"
+                                    alt="Do Artifacts Have Politics?"
+                                    class="rec-item-img"
+                                />
+                                <div class="rec-item-content">
+                                    <p class="rec-item-title">
+                                        Do Artifacts Have Politics?
+                                    </p>
+                                    <p class="rec-item-attr">
+                                        by Langdon Winner
+                                    </p>
+                                    <div class="rec-item-desc">
+                                        <p>
+                                            Winner argues that technologies are
+                                            not politically neutral because the
+                                            design of any technology can shape
+                                            social and political power, and
+                                            patterns of human behavior. As a
+                                            result, we should stop treating
+                                            technology as a neutral tool and
+                                            recognize that design decisions have
+                                            political and moral decisions. Once
+                                            we acknowledge this, we are equipped
+                                            to build intentionally.
+                                        </p>
+                                        <p>
+                                            This paper gave me the theory and
+                                            the articulation to talk about
+                                            political technologies.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rec-item">
+                                <img
+                                    src="content/kolmogorov.jpeg"
+                                    alt="Kolmogorov Complexity and Our Search for Meaning"
+                                    class="rec-item-img"
+                                />
+                                <div class="rec-item-content">
+                                    <p class="rec-item-title">
+                                        Kolmogorov Complexity and Our Search for
+                                        Meaning
+                                    </p>
+                                    <p class="rec-item-attr">
+                                        by Noson S. Yanofsky
+                                    </p>
+                                    <div class="rec-item-desc">
+                                        <p>
+                                            This is a beautiful essay about how
+                                            our search for meaning is like
+                                            Kolmogorov Complexity--a search for
+                                            the shortest possible description or
+                                            program needed to generate
+                                            something: There is no principled
+                                            way to know when we've found the
+                                            "best" explanation. We shouldn't
+                                            focus on the most optimal choice or
+                                            trying to make everything
+                                            explainable. Life has a necessary
+                                            uncertainty. Necessary because it's
+                                            what keeps our lives permanently
+                                            interesting and alive.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rec-item">
+                                <img
+                                    src="content/lawrencelessig.jpeg"
+                                    alt="The Laws of Cyberspace"
+                                    class="rec-item-img"
+                                />
+                                <div class="rec-item-content">
+                                    <p class="rec-item-title">
+                                        The Laws of Cyberspace
+                                    </p>
+                                    <p class="rec-item-attr">
+                                        by Lawrence Lessig
+                                    </p>
+                                    <div class="rec-item-desc">
+                                        <p>
+                                            This paper is what got me into tech
+                                            policy and motivated me into
+                                            utilizing my engineering skills for
+                                            effective good. Lessig writes that
+                                            the internet is regulated not just
+                                            by laws, but by these 4 modalities,
+                                            one being the code itself.
+                                        </p>
+                                        <p>
+                                            This paper, paired with Digital
+                                            Borders by Tim Wu and Careless
+                                            People by Wynn-Williams, shaped the
+                                            way I saw my role in society as an
+                                            engineer. It is clear that what we
+                                            produce as engineers is one that
+                                            changes politics at a global level
+                                            fast. We have a duty to make sure we
+                                            participate in a way that is good
+                                            and safe. It is also exciting to
+                                            know that I have the potential to
+                                            enact such great change.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rec-item">
+                                <img
+                                    src="content/petersinger.jpg"
+                                    alt="Famine, Affluence, and Morality"
+                                    class="rec-item-img"
+                                />
+                                <div class="rec-item-content">
+                                    <p class="rec-item-title">
+                                        Famine, Affluence, and Morality
+                                    </p>
+                                    <p class="rec-item-attr">by Peter Singer</p>
+                                    <div class="rec-item-desc">
+                                        <p>
+                                            I was super interested in Effective
+                                            Altruism in my senior year of high
+                                            school and early years in college,
+                                            and so, of course, I studied Peter
+                                            Singer's works. Famine, Affluence
+                                            and Morality is the piece that
+                                            argues for creating a more demanding
+                                            line between what is considered
+                                            charity and what is considered
+                                            morally obligated.
+                                        </p>
+                                        <p>
+                                            Singer argues that if we can prevent
+                                            suffering or death without
+                                            sacrificing something comparably
+                                            morally important, then we are
+                                            morally obligated to do so. The
+                                            distance does not matter. I am still
+                                            compelled to agree with this
+                                            argument.
+                                        </p>
+                                        <p>
+                                            While I do not associate myself with
+                                            the EA movement anymore, I think any
+                                            moral agent in today's world who
+                                            cares about doing good and not doing
+                                            bad should read this and consider
+                                            EA's arguments.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rec-item">
+                                <img
+                                    src="content/percybysshe.jpeg"
+                                    alt="Hymn to Intellectual Beauty"
+                                    class="rec-item-img"
+                                />
+                                <div class="rec-item-content">
+                                    <p class="rec-item-title">
+                                        Hymn to Intellectual Beauty
+                                    </p>
+                                    <p class="rec-item-attr">
+                                        by Percy Bysshe Shelley (Poem)
+                                    </p>
+                                    <div class="rec-item-desc">
+                                        <p>
+                                            Just a lovely poem about the
+                                            beautiful mind of the human race.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="rec-section not-selected"
+                            id="rec-restaurants"
+                        >
+                            <p class="heading">RESTAURANTS</p>
+                            <div class="rec-item">
+                                <img
+                                    src="content/signature.png"
+                                    alt="Signature"
+                                    class="rec-item-img"
+                                />
+                                <div class="rec-item-content">
+                                    <p class="rec-item-title">Signature</p>
+                                    <p class="rec-item-attr">
+                                        in Paris, France
+                                    </p>
+                                    <div class="rec-item-desc">
+                                        <p>
+                                            My first Michelin star restaurant
+                                            that made me understand what it
+                                            means to be a foodie. The chemistry
+                                            of flavors and intentionality of the
+                                            ingredients were insane. I loved the
+                                            Asian influences in my
+                                            dishes--particularly the pork belly
+                                            and the pear dessert soup at the
+                                            end.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rec-item">
+                                <img
+                                    src="content/bistrot.jpeg"
+                                    alt="Bistrot Levante"
+                                    class="rec-item-img"
+                                />
+                                <div class="rec-item-content">
+                                    <p class="rec-item-title">
+                                        Bistrot Levante
+                                    </p>
+                                    <p class="rec-item-attr">
+                                        in Barcelona, Spain
+                                    </p>
+                                    <div class="rec-item-desc">
+                                        <p>
+                                            The best Mediterranean food
+                                            probably. Their octopus dish was THE
+                                            best octopus I've ever had--with a
+                                            mix of spices, red oil, fresh herbs,
+                                            chickpeas, it was the golden elixir
+                                            that blessed my mouth.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rec-item">
+                                <img
+                                    src="content/shizen.jpg"
+                                    alt="Shizen"
+                                    class="rec-item-img"
+                                />
+                                <div class="rec-item-content">
+                                    <p class="rec-item-title">Shizen</p>
+                                    <p class="rec-item-attr">
+                                        in San Francisco, USA
+                                    </p>
+                                    <div class="rec-item-desc">
+                                        <p>
+                                            This place is vegan, and introduced
+                                            me to a new dimension in which the
+                                            vegetables could be in such great
+                                            harmony that no meat could reach. I
+                                            think the level of creativity in
+                                            this restaurant must be celebrated
+                                            as ingenuity in the food world.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rec-item">
+                                <img
+                                    src="content/barvolpe.jpeg"
+                                    alt="Bar Volpe"
+                                    class="rec-item-img"
+                                />
+                                <div class="rec-item-content">
+                                    <p class="rec-item-title">Bar Volpe</p>
+                                    <p class="rec-item-attr">in Boston, USA</p>
+                                    <div class="rec-item-desc">
+                                        <p>
+                                            Every single thing was a hit. The
+                                            wine pairing, the lemon-y crab
+                                            pasta, the truffle aranchini with a
+                                            drizzle of honey, the tiramisu
+                                            (which we ordered two of), and the
+                                            company. I'm obsessed and in luck
+                                            that this is just in town.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rec-item">
+                                <img
+                                    src="content/hunanimpression.jpeg"
+                                    alt="Hunan Impression"
+                                    class="rec-item-img"
+                                />
+                                <div class="rec-item-content">
+                                    <p class="rec-item-title">
+                                        Hunan Impression
+                                    </p>
+                                    <p class="rec-item-attr">
+                                        in San Jose, USA
+                                    </p>
+                                    <div class="rec-item-desc">
+                                        <p>
+                                            This list would not be complete
+                                            without a Hunan restaurant. As a
+                                            lover of the cuisine, I absolutely
+                                            adored Hunan Impression--I went at
+                                            least 4-5 times when I lived in the
+                                            Bay Area for 6 months. The spicy
+                                            grilled fish was immensely aromatic
+                                            and numbing which left my mouth
+                                            watering after every bite.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="rec-section not-selected" id="rec-music">
+                            <p class="heading">MUSIC</p>
+                            <div class="rec-item">
+                                <img
+                                    src="content/blackbeattles.jpeg"
+                                    alt="Black Beatles"
+                                    class="rec-item-img"
+                                />
+                                <div class="rec-item-content">
+                                    <p class="rec-item-title">Black Beatles</p>
+                                    <p class="rec-item-attr">
+                                        by Rae Sremmurd, Gucci Mane
+                                    </p>
+                                    <div class="rec-item-desc">
+                                        <p>:D</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rec-item">
+                                <img
+                                    src="content/anri.jpeg"
+                                    alt="Last Summer Whisper"
+                                    class="rec-item-img"
+                                />
+                                <div class="rec-item-content">
+                                    <p class="rec-item-title">
+                                        Last Summer Whisper
+                                    </p>
+                                    <p class="rec-item-attr">by Anri</p>
+                                    <div class="rec-item-desc">
+                                        <p>
+                                            Discovered and loved Japanese city
+                                            pop all throughout high school
+                                            during COVID. Wrote a lot of stories
+                                            with this playing in the background
+                                            during summer hot days locked up in
+                                            my room.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rec-item">
+                                <img
+                                    src="content/doyalik.jpg"
+                                    alt="Do Ya Like"
+                                    class="rec-item-img"
+                                />
+                                <div class="rec-item-content">
+                                    <p class="rec-item-title">Do Ya Like</p>
+                                    <p class="rec-item-attr">
+                                        by Childish Gambino (Adele)
+                                    </p>
+                                    <div class="rec-item-desc">
+                                        <p>I loved it hearing this live.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rec-item">
+                                <img
+                                    src="content/ouda.jpeg"
+                                    alt="Ouda"
+                                    class="rec-item-img"
+                                />
+                                <div class="rec-item-content">
+                                    <p class="rec-item-title">Ouda</p>
+                                    <p class="rec-item-attr">
+                                        by Hamid Al Shaeri
+                                    </p>
+                                    <div class="rec-item-desc">
+                                        <p>
+                                            The instrumentals and the vocals on
+                                            this are enchanting and made me fall
+                                            in love with this groovy, arabic
+                                            music genre. Went on a deep dive
+                                            after this and appreciated
+                                            everything I learned.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rec-item">
+                                <img
+                                    src="content/blackmilk.jpg"
+                                    alt="Black Milk"
+                                    class="rec-item-img"
+                                />
+                                <div class="rec-item-content">
+                                    <p class="rec-item-title">Black Milk</p>
+                                    <p class="rec-item-attr">
+                                        by Massive Attack &amp; Elizabeth Fraser
+                                    </p>
+                                    <div class="rec-item-desc">
+                                        <p>
+                                            Had a phase in which I was listening
+                                            to rock and dark psychedelic music
+                                            and absolutely obsessed over the
+                                            female vocals over the grunge,
+                                            persistent base in the background. I
+                                            love this album in general, but this
+                                            one in particular reminds me of
+                                            those times.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--<div class="rec-section not-selected" id="rec-beliefs">
+                            <p class="heading">BELIEFS</p>
+                            <div class="rec-item">
+                                <img
+                                    src="images/filler14.jpeg"
+                                    alt="Random img"
+                                    class="rec-item-img"
+                                />
+                                <div class="rec-item-content">
+                                    <p class="rec-item-title">
+                                        Agnostic Protestant Christian
+                                    </p>
+                                    <div class="rec-item-desc">
+                                        <p>
+                                            Placeholder sentence one.
+                                            Placeholder sentence two.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rec-item">
+                                <img
+                                    src="images/filler9.jpeg"
+                                    alt="Random img"
+                                    class="rec-item-img"
+                                />
+                                <div class="rec-item-content">
+                                    <p class="rec-item-title">5Ps</p>
+                                    <div class="rec-item-desc">
+                                        <p>
+                                            Placeholder sentence one.
+                                            Placeholder sentence two.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rec-item">
+                                <img
+                                    src="images/filler10.jpeg"
+                                    alt="Random img"
+                                    class="rec-item-img"
+                                />
+                                <div class="rec-item-content">
+                                    <p class="rec-item-title">
+                                        Math &amp; Philosophy is the foundation
+                                        for developing better Reason
+                                    </p>
+                                    <div class="rec-item-desc">
+                                        <p>
+                                            Placeholder sentence one.
+                                            Placeholder sentence two.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rec-item">
+                                <img
+                                    src="images/filler12.jpeg"
+                                    alt="Random img"
+                                    class="rec-item-img"
+                                />
+                                <div class="rec-item-content">
+                                    <p class="rec-item-title">
+                                        Nurture over Nature
+                                    </p>
+                                    <div class="rec-item-desc">
+                                        <p>
+                                            Placeholder sentence one.
+                                            Placeholder sentence two.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rec-item">
+                                <img
+                                    src="images/filler13.jpeg"
+                                    alt="Random img"
+                                    class="rec-item-img"
+                                />
+                                <div class="rec-item-content">
+                                    <p class="rec-item-title">
+                                        Work should be Meaningful to you
+                                    </p>
+                                    <div class="rec-item-desc">
+                                        <p>
+                                            Placeholder sentence one.
+                                            Placeholder sentence two.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>-->
                     </div>
                 </div>
             </div>

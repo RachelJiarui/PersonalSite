@@ -240,10 +240,22 @@ function selectAboutMe() {
   document.getElementById("table-view-body").classList.remove("selected");
   document.getElementById("technical-view-body").classList.add("not-selected");
   document.getElementById("technical-view-body").classList.remove("selected");
-  document.getElementById("ruminations-view-body").classList.add("not-selected");
+  document
+    .getElementById("ruminations-view-body")
+    .classList.add("not-selected");
   document.getElementById("ruminations-view-body").classList.remove("selected");
-  document.getElementById("recommended-reads-view-body").classList.add("not-selected");
-  document.getElementById("recommended-reads-view-body").classList.remove("selected");
+  document
+    .getElementById("recommended-reads-view-body")
+    .classList.add("not-selected");
+  document
+    .getElementById("recommended-reads-view-body")
+    .classList.remove("selected");
+  document
+    .getElementById("photography-view-body")
+    .classList.add("not-selected");
+  document.getElementById("photography-view-body").classList.remove("selected");
+  document.getElementById("top-five-toc").classList.add("not-selected");
+  document.getElementById("top-five-toc").classList.remove("selected");
 }
 
 function selectResume() {
@@ -264,9 +276,15 @@ function selectResume() {
   document
     .getElementById("recommended-reads-view-body")
     .classList.remove("selected");
+  document
+    .getElementById("photography-view-body")
+    .classList.add("not-selected");
+  document.getElementById("photography-view-body").classList.remove("selected");
 
   document.getElementById("about-me-view-body").classList.add("not-selected");
   document.getElementById("about-me-view-body").classList.remove("selected");
+  document.getElementById("top-five-toc").classList.add("not-selected");
+  document.getElementById("top-five-toc").classList.remove("selected");
 }
 
 function selectRuminations() {
@@ -287,9 +305,15 @@ function selectRuminations() {
   document
     .getElementById("recommended-reads-view-body")
     .classList.remove("selected");
+  document
+    .getElementById("photography-view-body")
+    .classList.add("not-selected");
+  document.getElementById("photography-view-body").classList.remove("selected");
 
   document.getElementById("about-me-view-body").classList.add("not-selected");
   document.getElementById("about-me-view-body").classList.remove("selected");
+  document.getElementById("top-five-toc").classList.add("not-selected");
+  document.getElementById("top-five-toc").classList.remove("selected");
 }
 
 function selectTechnical() {
@@ -312,9 +336,15 @@ function selectTechnical() {
   document
     .getElementById("recommended-reads-view-body")
     .classList.remove("selected");
+  document
+    .getElementById("photography-view-body")
+    .classList.add("not-selected");
+  document.getElementById("photography-view-body").classList.remove("selected");
 
   document.getElementById("about-me-view-body").classList.add("not-selected");
   document.getElementById("about-me-view-body").classList.remove("selected");
+  document.getElementById("top-five-toc").classList.add("not-selected");
+  document.getElementById("top-five-toc").classList.remove("selected");
 }
 
 function selectRecommendedReads() {
@@ -335,9 +365,74 @@ function selectRecommendedReads() {
   document
     .getElementById("recommended-reads-view-body")
     .classList.add("selected");
+  document
+    .getElementById("photography-view-body")
+    .classList.add("not-selected");
+  document.getElementById("photography-view-body").classList.remove("selected");
 
   document.getElementById("about-me-view-body").classList.add("not-selected");
   document.getElementById("about-me-view-body").classList.remove("selected");
+
+  document.getElementById("top-five-toc").classList.remove("not-selected");
+  document.getElementById("top-five-toc").classList.add("selected");
+
+  const defaultItem = document.querySelector("#top-five-toc .toc-item");
+  selectTopFiveCategory("rec-non-fiction-books", defaultItem);
+}
+
+function selectTopFiveCategory(id, clickedItem) {
+  const allSections = [
+    "rec-non-fiction-books",
+    "rec-fiction-books",
+    "rec-films",
+    "rec-essays",
+    "rec-restaurants",
+    "rec-music",
+    // "rec-beliefs",
+  ];
+  allSections.forEach((sectionId) => {
+    const el = document.getElementById(sectionId);
+    el.classList.add("not-selected");
+    el.classList.remove("selected");
+  });
+
+  const target = document.getElementById(id);
+  target.classList.remove("not-selected");
+  target.classList.add("selected");
+
+  document.querySelectorAll("#top-five-toc .toc-item").forEach((item) => {
+    item.classList.remove("selected");
+  });
+  if (clickedItem) clickedItem.classList.add("selected");
+
+  const scrollable = document.querySelector(".section.scrollable");
+  if (scrollable) scrollable.scrollTop = 0;
+}
+
+function selectPhotography() {
+  document
+    .getElementById("photography-view-body")
+    .classList.remove("not-selected");
+  document.getElementById("photography-view-body").classList.add("selected");
+
+  document.getElementById("table-view-body").classList.add("not-selected");
+  document.getElementById("table-view-body").classList.remove("selected");
+  document.getElementById("technical-view-body").classList.add("not-selected");
+  document.getElementById("technical-view-body").classList.remove("selected");
+  document
+    .getElementById("ruminations-view-body")
+    .classList.add("not-selected");
+  document.getElementById("ruminations-view-body").classList.remove("selected");
+  document
+    .getElementById("recommended-reads-view-body")
+    .classList.add("not-selected");
+  document
+    .getElementById("recommended-reads-view-body")
+    .classList.remove("selected");
+  document.getElementById("about-me-view-body").classList.add("not-selected");
+  document.getElementById("about-me-view-body").classList.remove("selected");
+  document.getElementById("top-five-toc").classList.add("not-selected");
+  document.getElementById("top-five-toc").classList.remove("selected");
 }
 
 document.querySelectorAll(".menu-item").forEach((item) => {

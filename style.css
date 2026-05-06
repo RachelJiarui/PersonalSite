@@ -1,6 +1,6 @@
 body {
     font-family: "Chivo", sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     color: #252627;
 }
 
@@ -8,7 +8,8 @@ p {
     text-align: justify;
     margin: 0px;
     padding: 0px;
-    word-break: break-all;
+    hyphens: auto;
+    word-wrap: break-word;
 }
 
 .ruminations-container {
@@ -82,7 +83,6 @@ p {
 
 .title-role {
     overflow: auto;
-    word-break: normal;
     white-space: normal;
     text-align: start;
 }
@@ -312,37 +312,107 @@ ul.desc li {
     margin-bottom: 26px;
 }
 
-#recommended-reads-view-body .rec-text-section:first-child .heading {
-    margin-top: 0;
+/* Photography grid: masonry-style via CSS columns */
+.photo-grid {
+    columns: 2;
+    column-gap: 12px;
 }
 
-/* Recommended reads: two-column layout */
-.rec-grid {
+.photo-grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+    break-inside: avoid;
+    margin-bottom: 12px;
+}
+
+/* Recommended content: per-item two-column layout */
+.rec-section {
+    margin-bottom: 8px;
+}
+
+.rec-item {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    grid-template-columns: 150px 1fr;
+    gap: 16px;
+    margin-bottom: 24px;
     align-items: start;
 }
 
-.rec-text-col {
-    display: flex;
-    flex-direction: column;
-}
-
-/* Mobile-only images are hidden on desktop */
-.rec-image-mobile {
-    display: none;
-}
-
-/* Desktop image column: evenly stacked with consistent gap */
-.rec-img-col {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.rec-img-col img {
+.rec-item-img {
     width: 100%;
+    height: auto;
+    background-color: #d4d4d4;
+    filter: grayscale(100%);
+}
+
+.rec-item-title {
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 4px;
+}
+
+.rec-item-attr {
+    font-style: italic;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.rec-item-desc {
+    margin-top: 0;
+    word-break: normal;
+}
+
+.rec-item-desc p {
+    margin-top: 0;
+}
+
+.rec-item-desc p + p {
+    margin-top: 10px;
+}
+
+.top-five-toc {
+    margin-left: 16px;
+    margin-top: 8px;
+    flex-direction: column;
+}
+
+.top-five-toc.selected {
+    display: flex;
+}
+
+.toc-item {
+    position: relative;
+    cursor: pointer;
+    text-align: left;
+    padding-left: 0;
+}
+
+.toc-item::before {
+    content: "";
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 6px solid black;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.toc-item.selected::before {
+    opacity: 1;
+}
+
+.toc-item:hover::before {
+    opacity: 1;
+}
+
+.toc-item:hover {
+    color: gray;
 }
 
 /* Hidden on desktop, shown on mobile */
@@ -529,7 +599,6 @@ ul.desc li {
     top: 0;
     width: 200px;
     text-align: justify;
-    word-break: break-all;
 }
 
 .sidenote.left {
@@ -689,18 +758,14 @@ ul.desc li {
         display: none;
     }
 
-    /* Recommended reads: collapse to single column, show mobile images, hide desktop column */
-    .rec-grid {
-        display: block;
+    /* Photography grid: single column on mobile */
+    .photo-grid {
+        columns: 1;
     }
 
-    .rec-img-col {
-        display: none;
-    }
-
-    .rec-image-mobile {
-        display: block;
-        width: 100%;
-        margin-top: 16px;
+    /* Recommended items: shrink image column on mobile */
+    .rec-item {
+        grid-template-columns: 72px 1fr;
+        gap: 12px;
     }
 }
